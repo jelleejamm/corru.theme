@@ -153,7 +153,7 @@
     --background-surface-high: var(--dark-color);
     --text-subtle: var(--bright-color);
     --spine-default: var(--bright-color);
-    --border-subtle: var(--bright-color);
+    --border-subtle: transparent;
     --text-muted: var(--bright-color);
     --reaction-border-reacted-default: var(--friend-color);
 }
@@ -623,7 +623,6 @@ article {
         --border-subtle: var(--dark-color);
         --reaction-background-default: var(--dark-color);
     }
-    
 
     li[data-is-self="true"] .markup__75297 small:not(.inlineFormat__75297) {
         color: var(--dark-color);
@@ -684,6 +683,11 @@ article {
         line-height: 150%;
         text-align: center;
         text-transform: uppercase;
+    }
+    
+    li[data-is-self="true"] .markup__75297.messageContent_c19a55 code {
+        font-size: 16px !important;
+        text-transform: none;
     }
 
     li[data-is-self="true"] .container_b7e1cb {
