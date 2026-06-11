@@ -1,3 +1,11 @@
+/**
+ * @name        corru.theme
+ * @author      jelleejamm
+ * @description theme based on corru.observer https://corru.observer
+ * @version     0.0.9999
+ */
+
+
 /* font defs that i just stole from the corru site LOL */
 
 @font-face {
@@ -141,6 +149,45 @@
     --background-base-lower: var(--dark-color) !important;
     --background-base-lowest: var(--dark-color) !important;
     --font-primary: "spacemono", monospace;
+    --red-new-46: var(--obesk-color);
+    --background-surface-high: var(--dark-color);
+    --text-subtle: var(--bright-color);
+    --spine-default: var(--bright-color);
+    --border-subtle: var(--bright-color);
+    --text-muted: var(--bright-color);
+    --reaction-border-reacted-default: var(--friend-color);
+}
+
+.divider__5126c.beforeGroup__5126c.divider__908e2.isUnread__908e2 {
+    border-top-width: 26px;
+    border-bottom-width: 13px !important;
+    border-bottom-style: solid;
+    border-color: var(--bright-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.unreadPill__908e2.endCap__908e2 {
+    position: relative;
+    border: 0;
+    background-color: var(--bright-color);
+    color: var(--dark-color);
+    height: 26px;
+    border-radius: 0;
+    font-size: 24px;
+}
+
+.unreadPillCap__908e2 {
+    display: none;
+}
+
+.quote__122e4 {
+    border-radius: 0px;
+}
+
+.headerContainer__122e4 svg path {
+    color: var(--bright-color);
+    fill: var(--bright-color);
 }
 
 .messagesWrapper__36d07, .form_f75fb0 {
@@ -179,7 +226,7 @@
     background-color: var(--neutral-color);
 }
 
-.headerContent_f37cb1.primaryInfo_f37cb1 span .inviteButton_f37cb1 svg path {
+.headerContent_f37cb1.primaryInfo_f37cb1 span .inviteButton_f37cb1 svg path, .embedSuppressButton__623de {
     color: var(--dark-color) !important;
     fill: var(--dark-color) !important;
 }
@@ -194,12 +241,8 @@
     color: var(--bright-color) !important;
 }
 
-.containerDefault_c69b6d, .name__2ea32.overflow_b0dfc2 {
+.containerDefault_c69b6d {
     color: var(--bright-color) !important;
-}
-
-.unread__2ea32.unreadImportant__2ea32 {
-    background-color: var(--bright-color) !important;
 }
 
 .outer_c0bea0 {
@@ -433,6 +476,11 @@ div[aria-label="Preview Message"] {
     fill: var(--bright-color) !important;
 }
 
+.actionIcon_c69b6d {
+    color: var(--neutral-color) !important;
+    fill: var(--neutral-color) !important;
+}
+
 .spriteContainer__04eed .spriteColored__04eed, .spriteContainer__04eed .spriteGreyscale__04eed {
     filter: brightness(100);
 }
@@ -498,45 +546,156 @@ svg .mask__44b0c {
     color: var(--bright-color) !important;
 }
 
-/* ---- INTERLOPER START ---- */
 
-li[data-is-self="true"] .container_b7e1cb, li[data-is-self="true"] .contents_c19a55, li[data-is-self="true"] .username_c19a55 {
-    background: var(--bright-color) !important;
-    color: var(--dark-color) !important;
-}
-
-li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .username_c19a55, li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 .messageContent_c19a55 {
-    font-family: "spacemono", monospace !important;
-    background: var(--dark-color) !important;
-    color: var(--bright-color) !important;
-    font-size: 100%;
-    line-height: 100%;
+.messageContent_c19a55 h1 span span, .messageContent_c19a55 h2 span span, .messageContent_c19a55 h3 span span {
+    font-weight: normal;
     text-transform: none;
 }
 
-li[data-is-self="true"] .clanTagChiplet_c19a55 {
-    background-color: var(--dark-color);
-}
+/* this part of da sea ss hase been chosen 2 become... EVIL MODE!!! */
 
-li[data-is-self="true"] .markup__75297.messageContent_c19a55 {
-    font-family: barcodetext !important;
-    color: var(--dark-color);
+.messageContent_c19a55 h1 span span {
+    font-family: bastard;
+    color: var(--bastard-color) !important;
+    border: 1px solid var(--bastard-color);
+    padding: 5px;
     font-size: 200%;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.79) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 75%, rgba(0,0,0,0.9) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/stun.gif");
+    line-height: 140%;
+}
+
+/* SEE U SOON INTRALKOBER >:P */
+
+.messageContent_c19a55 h2 span span {
+    font-family: "spacemono", monospace;
+    color: var(--obesk-color) !important;
+    text-shadow: 1px 1px var(--dark-color), 2px 2px 2px var(--friend-color);
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif");
+    background-position: center;
+    background-size: 100%;
+    border: 1px solid var(--obesk-color);
+    padding: 5px;
+    line-height: 220%;
+}
+
+.messageContent_c19a55 h3 span span {
+    font-family: "beech";
+    color: var(--dark-color) !important;
+    font-size: 120%;
+    padding: 5px;
+    background-color: var(--bright-color);
     line-height: 150%;
-    text-align: center;
-    text-transform: uppercase;
 }
 
-li[data-is-self="true"] .container_b7e1cb {
-    place-items: center !important;
-    justify-content: center;
-    text-align: center !important;
+.modeUnreadImportant__2ea32 div {
+    color: var(--friend-color) !important;
 }
 
-li[data-is-self="true"] .cozy_c19a55 .messageContent_c19a55 {
-    padding-left: 0px !important;
-    margin-left: 0px !important;
+.unreadImportant__2ea32 {
+    background-color: var(--friend-color) !important;
 }
+
+.name__2ea32.overflow_b0dfc2 {
+    color: var(--bright-color);
+}
+
+.header_c19a55 .timestamp_c19a55 {
+    color: var(--bright-color);
+}
+
+.repliedTextPreview_c19a55 a, .container_b7e1cb a, .markup__75297.messageContent_c19a55 a {
+    color: var(--friend-color);
+}
+
+article {
+    border-radius: 0 !important;
+}   
+
+.reactionBtn__23977, .reaction__23977 {
+    border-radius: 0px !important;
+    background-color: var(--reaction-background-default) !important;
+}    
+
+/* ---- INTERLOPER START ---- */
+
+    li[data-is-self="true"] {
+        --text-muted: var(--dark-color);
+        --border-subtle: var(--dark-color);
+        --reaction-background-default: var(--dark-color);
+    }
+    
+
+    li[data-is-self="true"] .markup__75297 small:not(.inlineFormat__75297) {
+        color: var(--dark-color);
+        display: block;
+        font-size: calc(0.875rem * 1.5);
+        line-height: calc(1.20313rem * 1.5);
+    }
+
+    li[data-is-self="true"] .headerContainer__122e4 svg path {
+        color: var(--dark-color);
+        fill: var(--dark-color);
+    }
+    
+    li[data-is-self="true"] .messageContent_c19a55 a:not(.embedLink__623de) {
+        color: var(--obesk-color);
+        text-decoration: none;
+    }
+    
+    li[data-is-self="true"] .repliedTextPreview_c19a55 a {
+        color: var(--friend-color);
+    }
+    
+    li[data-is-self="true"] .header_c19a55 .timestamp_c19a55 {
+        color: var(--dark-color);
+    }
+
+    li[data-is-self="true"] .container_b7e1cb, li[data-is-self="true"] .contents_c19a55, li[data-is-self="true"] .username_c19a55 {
+        background: var(--bright-color) !important;
+        color: var(--dark-color) !important;
+    }
+
+    li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .username_c19a55, li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 .messageContent_c19a55 {
+        font-family: "spacemono", monospace !important;
+        background: var(--dark-color) !important;
+        color: var(--bright-color) !important;
+        font-size: 100%;
+        line-height: 100%;
+        text-transform: none;
+    }
+
+    li[data-is-self="true"] .messageContent_c19a55 .timestamp_c19a55 {
+        font-family: "spacemono", monospace !important;
+        background: var(--bright-color) !important;
+        color: var(--dark-color) !important;
+        font-size: 100%;
+        line-height: 100%;
+        text-transform: none;
+    }
+
+    li[data-is-self="true"] .clanTagChiplet_c19a55 {
+        background-color: var(--dark-color);
+    }
+
+    li[data-is-self="true"] .markup__75297.messageContent_c19a55 {
+        font-family: barcodetext !important;
+        color: var(--dark-color);
+        font-size: 200%;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    li[data-is-self="true"] .container_b7e1cb {
+        place-items: center !important;
+        justify-content: center;
+        text-align: center !important;
+    }
+
+    li[data-is-self="true"] .cozy_c19a55 .messageContent_c19a55 {
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+    }
 
 /* ---- INTERLOPER END ---- */
 
@@ -604,6 +763,10 @@ rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
 .childContainer__3e3b0 svg path {
     color: var(--bright-color) !important;
     fill: var(--bright-color) !important;
+}
+
+.content__20a53.vc-member-list-decorators-display-names {
+    color: var(--bright-color);
 }
 
 /*
