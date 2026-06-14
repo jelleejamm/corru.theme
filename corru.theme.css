@@ -5,7 +5,6 @@
  * @version     0.0.9999
  */
 
-
 /* font defs that i just stole from the corru site LOL */
 
 @font-face {
@@ -142,8 +141,8 @@
     font-feature-settings: "liga" 0;
     font-size: var(--regularFont);
     
-    --custom-message-margin-left-content-cozy: 100px !important;
-    --custom-message-spacing-vertical-container-cozy: 1.0rem !important;
+    --custom-message-margin-left-content-cozy: 20px;
+    --custom-message-spacing-vertical-container-cozy: 5px;
     
     --background-base-low: var(--dark-color) !important;
     --background-base-lower: var(--dark-color) !important;
@@ -156,6 +155,7 @@
     --border-subtle: transparent;
     --text-muted: var(--bright-color);
     --reaction-border-reacted-default: var(--friend-color);
+    --blurple-50: var(--friend-color) !important;
 }
 
 .divider__5126c.beforeGroup__5126c.divider__908e2.isUnread__908e2 {
@@ -174,11 +174,45 @@
     color: var(--dark-color);
     height: 26px;
     border-radius: 0;
-    font-size: 24px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .unreadPillCap__908e2 {
     display: none;
+}
+
+.divider__5126c.divider__908e2.isUnread__908e2 {
+    border-top-width: 26px;
+    border-bottom-width: 13px !important;
+    border-bottom-style: solid;
+    border-color: var(--bright-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.divider__5126c.hasContent__5126c.divider__908e2.hasContent__908e2 {
+    align-items: center;
+    border-top: thin solid var(--border-subtle);
+    border-top-width: 26px;
+    border-bottom-width: 13px !important;
+    border-bottom-style: solid;
+    border-color: var(--bright-color);
+}
+
+.divider__5126c.hasContent__5126c.divider__908e2.hasContent__908e2 .content__908e2 {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 0;
+    background-color: var(--bright-color);
+    color: var(--dark-color);
+    border-radius: 0;
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 
 .quote__122e4 {
@@ -498,24 +532,92 @@ div[aria-label="Preview Message"] {
     border-color: var(--bright-color);
     border-style: double;
     border-width: 5px;
-    isolation: isolate;
+    transform: translateY(-10px);
 }
+
+
+.groupStart__5126c .contents_c19a55:has(.avatar_c19a55):before {
+    content: "";
+    display: block;
+    inset-inline-start: var(--custom-message-margin-horizontal);
+    margin-top: calc(4px - var(--custom-message-spacing-vertical-container-cozy));
+    overflow: hidden;
+    position: absolute;
+    z-index: -1 !important;
+    left: calc(58px + 10px);
+    top: 30px;
+    height: 10px;
+    width: 40px;
+    border: 0.32rem double;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-color: var(--bright-color);
+}
+
+.groupStart__5126c:has(.repliedMessage_c19a55) .contents_c19a55:has(.avatar_c19a55):before {
+    top: 50px;
+}
+
+/*
+.groupStart__5126c .contents_c19a55:has(.avatar_c19a55):before {
+    content: "";
+    position: absolute;
+    right: -0.95em;
+    height: calc(100% - 5em);
+    width: 50%;
+    border: 0.32rem double;
+    border-left: unset;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-color: var(--color);
+    z-index: -1;
+    border-color: inherit;
+} */
 
 .avatarDecoration_c19a55 {
     display: none;
 }
 
+
+@keyframes messagein {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes messageinalt {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.message__5126c {
+    animation: messagein 0.4s ease-out;
+}
+
+.message__5126c:has(.isSending_c19a55) {
+    animation: none;
+    transform: translateX(-100vw);
+}
+
 .groupStart__5126c {
-    min-width: 500px !important;
+    /* min-width: 500px !important; fuck was this for LOL*/
+    padding-bottom: 5px !important;
 }
 
 .container_b7e1cb, .contents_c19a55 {
     background: var(--dark-color) !important;
-    border-width: 0.16rem !important;
+    border-width: 1px !important;
     border-style: solid;
     border-color: var(--bright-color) !important;
     border-radius: 0 !important;
-    padding: 20px;
+    padding: 10px;
 }
 
 .avatarStack__44b0c, .avatarDecorationContainer__44b0c {
@@ -700,6 +802,36 @@ article {
         padding-left: 0px !important;
         margin-left: 0px !important;
     }
+    
+    li[data-is-self="true"] .message__5126c {
+        animation: messageinalt 0.4s ease-out;
+    }
+
+    li[data-is-self="true"] .message__5126c:has(.isSending_c19a55) {
+        animation: none;
+        transform: translateX(100vw);
+    }
+    
+    li[data-is-self="true"] .groupStart__5126c.message__5126c {
+        padding-inline-start: 20px !important;
+        padding-inline-end: 98px !important;
+    }
+    
+    li[data-is-self="true"] .avatar_c19a55 {
+        inset-inline-start: unset;
+        inset-inline-end: var(--custom-message-margin-horizontal);
+    }
+    
+    li[data-is-self="true"] .avatar_c19a55 {
+        border-radius: 0;
+        min-width: 64px;
+        min-height: 64px;
+        border: 0;
+    }
+    
+    li[data-is-self="true"] .header_c19a55 {
+        text-align: right;
+    }
 
 /* ---- INTERLOPER END ---- */
 
@@ -726,12 +858,26 @@ rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
     fill: var(--obesk-color) !important;
 }
 
+.timestampVisibleOnHover_c19a55 {
+    display: none !important;
+}
+
+/* move some shit around */
+
 .cozy_c19a55 .messageContent_c19a55 {
-    padding-inline-start: 120px;
+    padding-inline-start: 30px;
+}
+
+.groupStart__5126c:has(.avatar_c19a55) {
+    padding-inline-start: 100px !important;
+}
+
+.groupStart__5126c:has(.container__235ca) {
+    padding-inline-start: 60px !important;
 }
 
 .header_c19a55 {
-    padding-inline-start: 20px;
+    padding-inline-start: 10px;
 }
 
 .statusText_ab8609 {
