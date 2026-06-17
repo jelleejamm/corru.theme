@@ -156,6 +156,42 @@
     --text-muted: var(--bright-color);
     --reaction-border-reacted-default: var(--friend-color);
     --blurple-50: var(--friend-color) !important;
+    --mention-background: var(--friend-color);
+    --mention-foreground: var(--dark-color);
+    --icon-feedback-warning: var(--neutral-color);
+    --text-link: var(--friend-color);
+    --reaction-text-default: var(--bright-color);
+}
+
+.metadataSize_cf09d8 {
+    color: var(--bright-color) !important;
+    opacity: 1;
+}
+
+code.inline {
+    display: inline-block;
+    padding: 2.5px 5px;
+    background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/corrurippletran.gif"), white !important;
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-position: center !important;
+    color: var(--dark-color) !important;
+    border: 1px solid var(--neutral-color) !important;
+    border-radius: 0 !important;
+    margin: 2.5px;
+}
+
+.scrollbarGhostHairline__506b3.scrollbar__506b3.hljs {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif");
+    text-align: right;
+    color: var(--dark-color);
+    border-color: var(--bright-color);
+    border-radius: 0;
+    font-family: barcodetext, monospace;
+    font-size: 2.3rem;
+    text-shadow: 0px 0px var(--neutral-color);
+    line-height: 1.25em;
+    background-size: auto 100%;
 }
 
 .divider__5126c.beforeGroup__5126c.divider__908e2.isUnread__908e2 {
@@ -249,18 +285,26 @@
     border-radius: 0px !important;
 }
 
-.guildBadgeAndName_f37cb1 h2 {
+.guildBadgeAndName_f37cb1 .name_f37cb1 {
     color: var(--dark-color);
     font-family: barcodetext;   
     font-size: 32px;
     font-weight: normal;
+    text-transform: uppercase;
+}
+
+.guildBadgeAndName_f37cb1 .name_f37cb1:before {
+    content: "..__";
+}
+.guildBadgeAndName_f37cb1 .name_f37cb1:after {
+    content: "__..";
 }
 
 .container_f37cb1 {
     background-color: var(--neutral-color);
 }
 
-.headerContent_f37cb1.primaryInfo_f37cb1 span .inviteButton_f37cb1 svg path, .embedSuppressButton__623de {
+.headerContent_f37cb1.primaryInfo_f37cb1 span .inviteButton_f37cb1 svg path, .embedSuppressButton__623de, .headerChildren_f37cb1 {
     color: var(--dark-color) !important;
     fill: var(--dark-color) !important;
 }
@@ -472,7 +516,7 @@ div[aria-label="Preview Message"] {
     padding-top: 6px;
 }
 
-.button_a22cb0.primary_a22cb0, .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0), .button__201d5.grow__201d5.lookFilled__201d5  {
+.button_a22cb0.primary_a22cb0, .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0):not(.md_a22cb0), .button__201d5.grow__201d5.lookFilled__201d5  {
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     align-items: center;
     justify-content: center;
@@ -525,7 +569,7 @@ div[aria-label="Preview Message"] {
     letter-spacing: 0.25px;
 }
 
-.avatar_c19a55 {
+.cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
     border-radius: 100%;
     min-width: 58px;
     min-height: 58px;
@@ -544,7 +588,7 @@ div[aria-label="Preview Message"] {
     overflow: hidden;
     position: absolute;
     z-index: -1 !important;
-    left: calc(58px + 10px);
+    left: calc(58px);
     top: 30px;
     height: 10px;
     width: 40px;
@@ -718,6 +762,98 @@ article {
     background-color: var(--reaction-background-default) !important;
 }    
 
+.guildInviteContainer__083ae {
+    display: flex;
+    flex-direction: column;
+    font-family: barcodetext;
+    background: var(--dark-color);
+    color: var(--neutral-color);
+    border: 1px solid var(--neutral-color);
+    font-size: 1.5em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.guildName__6e500 {
+    color: var(--obesk-color) !important;
+    font-family: barcodetext;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: normal !important;
+}
+
+.guildName__6e500:before {
+    content: "..__";
+}
+
+.guildName__6e500:after {
+    content: "__..";
+}
+
+.footerContent__083ae .buttonContainer__083ae .button_a22cb0 {
+    border-radius: 0;
+    border: 0;
+    color: var(--neutral-color);
+    background-color: var(--dark-color);
+    font-family: barcodetext;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: normal !important;
+}
+
+.footerContent__083ae .buttonContainer__083ae .button_a22cb0 .lineClamp1__4bd52:before {
+    content: "[[__";
+}
+
+.footerContent__083ae .buttonContainer__083ae .button_a22cb0 .lineClamp1__4bd52:after {
+    content: "__]]";
+}
+
+.header__6e500, .nameContainer__6e500, .cardHeightMeasure__083ae {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__0f084 {
+    font-family: 'beech', 'spacemono' !important;
+    font-size: 1.5em;
+}
+
+.input__0f084::placeholder {
+    color: transparent;
+}
+
+.container__0f084 {
+    z-index: 105;
+    border: 0;
+    text-align: center;
+    font-family: 'beech', 'spacemono' !important;
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/mneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
+    background-color: black;
+    box-shadow: 0px 0px 5px var(--obesk-color);
+    color: var(--friend-color);
+    border-radius: 100px;
+}
+
+.container__0f084:focus-within {
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/cneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
+    box-shadow: 0px 0px 5px var(--friend-color);
+}
+
+.dialogue-message.actor-sys {
+    --color: var(--dark-color);
+    --background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url(/img/textures/warp.png), url(/img/textures/static.gif);
+    border-color: var(--bright-color);
+    font-family: barcodetext, monospace;
+    font-size: 2.3rem;
+    text-shadow: 0px 0px var(--neutral-color); /* adjustment by octo */
+}
+
 /* ---- INTERLOPER START ---- */
 
     li[data-is-self="true"] {
@@ -744,7 +880,7 @@ article {
     }
     
     li[data-is-self="true"] .repliedTextPreview_c19a55 a {
-        color: var(--friend-color);
+        color: var(--friend-color) !important;
     }
     
     li[data-is-self="true"] .header_c19a55 .timestamp_c19a55 {
@@ -787,8 +923,11 @@ article {
         text-transform: uppercase;
     }
     
-    li[data-is-self="true"] .markup__75297.messageContent_c19a55 code {
+    li[data-is-self="true"] .markup__75297.messageContent_c19a55 code:not(.scrollbarGhostHairline__506b3) {
         font-size: 16px !important;
+    }
+    
+    li[data-is-self="true"] .markup__75297.messageContent_c19a55 code {
         text-transform: none;
     }
 
@@ -817,12 +956,12 @@ article {
         padding-inline-end: 98px !important;
     }
     
-    li[data-is-self="true"] .avatar_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
         inset-inline-start: unset;
         inset-inline-end: var(--custom-message-margin-horizontal);
     }
     
-    li[data-is-self="true"] .avatar_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
         border-radius: 0;
         min-width: 64px;
         min-height: 64px;
@@ -831,6 +970,14 @@ article {
     
     li[data-is-self="true"] .header_c19a55 {
         text-align: right;
+    }
+    
+    li[data-is-self="true"] .repliedMessage_c19a55 {
+        justify-content: right;
+    }
+    
+    li[data-is-self="true"] .operations_bab751 {
+        color: var(--dark-color);
     }
 
 /* ---- INTERLOPER END ---- */
