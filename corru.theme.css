@@ -655,6 +655,90 @@ div[aria-label="Preview Message"] {
     padding-bottom: 5px !important;
 }
 
+
+.cozyMessage__5126c.isSystemMessage_c19a55 {
+    --reaction-background-default: var(--dark-color);
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .reactionCount__23977 {
+    font-family: 'spacemono' !important;
+    font-size: unset;
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .container_b7e1cb {
+    justify-items: right;
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .contents_c19a55, .cozyMessage__5126c.isSystemMessage_c19a55 .container_b7e1cb, .cozyMessage__5126c.isSystemMessage_c19a55 .content__235ca {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif") !important;
+    background-color: unset;
+    font-family: barcodetext, monospace !important;
+    background-size: auto 100%;
+    text-align: right !important;
+    color: var(--dark-color);
+    border-color: var(--bright-color);
+    border-radius: 0;
+    text-shadow: 0px 0px var(--neutral-color);
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .contents_c19a55, .cozyMessage__5126c.isSystemMessage_c19a55 .content__235ca {
+    font-size: 2.3rem;
+    line-height: 1.25em;
+    justify-items: right;
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .name__703b9.username__703b9.desaturateUserColors__41f68 {
+    font-size: 2.3rem;
+    line-height: 1.25em;
+    height: unset;
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .timestamp_c19a55.timestampInline_c19a55 {
+    font-size: 1.3rem;
+}
+
+.cozyMessage__5126c.isSystemMessage_c19a55 .contents_c19a55:after {
+    inset-inline-start: unset;
+    inset-inline-end: var(--custom-message-margin-horizontal);
+    content: "";
+    background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/mindspikelogoactive.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif");
+    background-position: center;
+    background-size: 58px 58px; 
+    background-repeat: no-repeat;
+    animation: SPIN 30s linear infinite;
+    display: block;
+    z-index: 70 !important;
+    top: 5px;
+    height: 58px;
+    width: 58px;
+    border: 0.32rem solid;
+    border-radius: 100%;
+    border-color: var(--bright-color);
+    overflow: hidden;
+    position: absolute;
+}
+
+
+/* note to self use this when you make the obesk theme */
+.cozyMessage__5126c.isSystemMessage_c19a55 .contents_c19a55:before {
+    content: "";
+    display: block;
+    inset-inline-start: unset;
+    inset-inline-end: var(--custom-message-margin-horizontal);
+    margin-top: calc(4px - var(--custom-message-spacing-vertical-container-cozy));
+    overflow: hidden;
+    position: absolute;
+    z-index: -1 !important;
+    right: 60px;
+    top: 30px;
+    height: 10px;
+    width: 40px;
+    border: 0.32rem double;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-color: var(--bright-color);
+}
+
 .container_b7e1cb, .contents_c19a55 {
     background: var(--dark-color) !important;
     border-width: 1px !important;
@@ -845,13 +929,9 @@ article {
     box-shadow: 0px 0px 5px var(--friend-color);
 }
 
-.dialogue-message.actor-sys {
-    --color: var(--dark-color);
-    --background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url(/img/textures/warp.png), url(/img/textures/static.gif);
-    border-color: var(--bright-color);
-    font-family: barcodetext, monospace;
-    font-size: 2.3rem;
-    text-shadow: 0px 0px var(--neutral-color); /* adjustment by octo */
+.cozyMessage__5126c.isSystemMessage_c19a55 {
+    padding-inline-start: 20px !important;
+    padding-inline-end: 98px !important;
 }
 
 /* ---- INTERLOPER START ---- */
@@ -862,7 +942,7 @@ article {
         --reaction-background-default: var(--dark-color);
     }
 
-    li[data-is-self="true"] .markup__75297 small:not(.inlineFormat__75297) {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297 small:not(.inlineFormat__75297) {
         color: var(--dark-color);
         display: block;
         font-size: calc(0.875rem * 1.5);
@@ -874,7 +954,7 @@ article {
         fill: var(--dark-color);
     }
     
-    li[data-is-self="true"] .messageContent_c19a55 a:not(.embedLink__623de) {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 a:not(.embedLink__623de) {
         color: var(--obesk-color);
         text-decoration: none;
     }
@@ -887,7 +967,7 @@ article {
         color: var(--dark-color);
     }
 
-    li[data-is-self="true"] .container_b7e1cb, li[data-is-self="true"] .contents_c19a55, li[data-is-self="true"] .username_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .container_b7e1cb, li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .contents_c19a55, li[data-is-self="true"] .username_c19a55 {
         background: var(--bright-color) !important;
         color: var(--dark-color) !important;
     }
@@ -901,7 +981,7 @@ article {
         text-transform: none;
     }
 
-    li[data-is-self="true"] .messageContent_c19a55 .timestamp_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 .timestamp_c19a55 {
         font-family: "spacemono", monospace !important;
         background: var(--bright-color) !important;
         color: var(--dark-color) !important;
@@ -914,7 +994,7 @@ article {
         background-color: var(--dark-color);
     }
 
-    li[data-is-self="true"] .markup__75297.messageContent_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 {
         font-family: barcodetext !important;
         color: var(--dark-color);
         font-size: 200%;
@@ -923,26 +1003,26 @@ article {
         text-transform: uppercase;
     }
     
-    li[data-is-self="true"] .markup__75297.messageContent_c19a55 code:not(.scrollbarGhostHairline__506b3) {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 code:not(.scrollbarGhostHairline__506b3) {
         font-size: 16px !important;
     }
     
-    li[data-is-self="true"] .markup__75297.messageContent_c19a55 code {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 code {
         text-transform: none;
     }
 
-    li[data-is-self="true"] .container_b7e1cb {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .container_b7e1cb {
         place-items: center !important;
         justify-content: center;
         text-align: center !important;
     }
 
-    li[data-is-self="true"] .cozy_c19a55 .messageContent_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 {
         padding-left: 0px !important;
         margin-left: 0px !important;
     }
     
-    li[data-is-self="true"] .message__5126c {
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) {
         animation: messageinalt 0.4s ease-out;
     }
 
@@ -951,7 +1031,7 @@ article {
         transform: translateX(100vw);
     }
     
-    li[data-is-self="true"] .groupStart__5126c.message__5126c {
+    li[data-is-self="true"] .groupStart__5126c.cozyMessage__5126c:not(.isSystemMessage_c19a55).message__5126c {
         padding-inline-start: 20px !important;
         padding-inline-end: 98px !important;
     }
@@ -962,7 +1042,6 @@ article {
     }
     
     li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
-        border-radius: 0;
         min-width: 64px;
         min-height: 64px;
         border: 0;
@@ -1019,9 +1098,14 @@ rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
     padding-inline-start: 100px !important;
 }
 
+/*
 .groupStart__5126c:has(.container__235ca) {
     padding-inline-start: 60px !important;
 }
+
+disabling because i think i broke something with this? unsure
+
+*/
 
 .header_c19a55 {
     padding-inline-start: 10px;
@@ -1064,6 +1148,10 @@ rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
 
 .content__20a53.vc-member-list-decorators-display-names {
     color: var(--bright-color);
+}
+
+.animatedBannerHoverLayer_f37cb1 {
+
 }
 
 /*
