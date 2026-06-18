@@ -7,8 +7,8 @@ it is intended for use with [equicord](https://equicord.org) and [vencord](https
 1. make sure you have either [equicord](https://equicord.org) or [vencord](https://vencord.dev) installed
 2. in the client mod settings, go to the themes tab
 now, you have two choices. either:
-a. insert `https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/corru.theme.css` (and any other additional .css files) into your online themes (recommended if you want it to update automatically)
-b. download `corru.theme.css` (and any other additional .css files), open the themes folder and put them in
+- insert `https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/corru.theme.css` (and any other additional .css files) into your online themes (recommended if you want it to update automatically)
+- download `corru.theme.css` (and any other additional .css files), open the themes folder and put them in
 3. enable the theme in the themes menu
 4. you're all set!
 
