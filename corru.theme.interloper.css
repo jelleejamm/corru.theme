@@ -1,0 +1,153 @@
+/**
+ * @name        corru.theme.interloper
+ * @author      jelleejamm
+ * @description make your messages look like the interloper's! corru.theme (https://github.com/jelleejamm/corru.theme/) and the themeattributes plugin are required
+ * @version     0.0.9999
+ */
+
+/* ---- INTERLOPER START ---- */
+
+    li[data-is-self="true"] {
+        --text-muted: var(--dark-color);
+        --border-subtle: var(--dark-color);
+        --reaction-background-default: var(--dark-color);
+    }
+
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297 small:not(.inlineFormat__75297) {
+        color: var(--dark-color);
+        display: block;
+        font-size: calc(0.875rem * 1.5);
+        line-height: calc(1.20313rem * 1.5);
+    }
+
+    li[data-is-self="true"] .headerContainer__122e4 svg path {
+        color: var(--dark-color);
+        fill: var(--dark-color);
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 a:not(.embedLink__623de) {
+        color: var(--obesk-color);
+        text-decoration: none;
+    }
+    
+    li[data-is-self="true"] .repliedTextPreview_c19a55 a {
+        color: var(--friend-color) !important;
+    }
+    
+    li[data-is-self="true"] .header_c19a55 .timestamp_c19a55 {
+        color: var(--dark-color);
+    }
+
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .container_b7e1cb, li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .contents_c19a55, li[data-is-self="true"] .username_c19a55 {
+        background: var(--bright-color) !important;
+        color: var(--dark-color) !important;
+    }
+
+    li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .username_c19a55, li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 .messageContent_c19a55 {
+        font-family: "spacemono", monospace !important;
+        background: var(--dark-color) !important;
+        color: var(--bright-color) !important;
+        font-size: 100%;
+        line-height: 100%;
+        text-transform: none;
+    }
+
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 .timestamp_c19a55 {
+        font-family: "spacemono", monospace !important;
+        background: var(--bright-color) !important;
+        color: var(--dark-color) !important;
+        font-size: 100%;
+        line-height: 100%;
+        text-transform: none;
+    }
+
+    li[data-is-self="true"] .clanTagChiplet_c19a55 {
+        background-color: var(--dark-color);
+    }
+
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 {
+        font-family: barcodetext !important;
+        color: var(--dark-color);
+        font-size: 200%;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 code:not(.scrollbarGhostHairline__506b3) {
+        font-size: 16px !important;
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 code {
+        text-transform: none;
+    }
+
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .container_b7e1cb {
+        place-items: center !important;
+        justify-content: center;
+        text-align: center !important;
+    }
+
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 {
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) {
+        animation: messageinalt 0.4s ease-out;
+    }
+
+    li[data-is-self="true"] .message__5126c:has(.isSending_c19a55) {
+        animation: none;
+        transform: translateX(100vw);
+    }
+    
+    li[data-is-self="true"] .groupStart__5126c.cozyMessage__5126c:not(.isSystemMessage_c19a55).message__5126c {
+        padding-inline-start: 20px !important;
+        padding-inline-end: 98px !important;
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
+        inset-inline-start: unset;
+        inset-inline-end: var(--custom-message-margin-horizontal);
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
+        min-width: 64px;
+        min-height: 64px;
+        border: 0;
+    }
+    
+    li[data-is-self="true"] .header_c19a55 {
+        text-align: right;
+    }
+    
+    li[data-is-self="true"] .repliedMessage_c19a55 {
+        justify-content: right;
+    }
+    
+    li[data-is-self="true"] .operations_bab751 {
+        color: var(--dark-color);
+    }
+    
+    li[data-is-self="true"] .before_subtext_ada32f, .subtext_ada32f {
+        color: var(--bright-color);
+    }
+    
+    li[data-is-self="true"] .container_b7e1cb, 
+    li[data-is-self="true"] .contents_c19a55 {
+        border-color: var(--bright-color) !important;
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55:has(.avatar_c19a55):before {
+        display: none !important;
+    }
+    
+    li[data-is-self="true"] .repliedMessageClickableSpine_c19a55 { /*todo fix this*/
+        transform: scaleX(-1);
+        inset-inline-start: calc(-76px);
+        inset-inline-end: var(--custom-message-margin-horizontal);
+        left: calc(100% + var(--custom-message-margin-horizontal) - 100px);
+    }
+
+/* ---- INTERLOPER END ---- */

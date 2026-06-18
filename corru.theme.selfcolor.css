@@ -1,0 +1,35 @@
+/**
+ * @name        corru.theme.selfcolor
+ * @author      jelleejamm
+ * @description color your own messages! go to quickcss and change "--corrutheme-chat-selfcolor" to your own color. corru.theme (https://github.com/jelleejamm/corru.theme/) and the themeattributes plugin are required
+ * @version     0.0.9999
+ */  
+ 
+    li[data-is-self="true"] {
+        --text-subtle: var(--corrutheme-chat-selfcolor);
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 {
+        color: var(--corrutheme-chat-selfcolor);
+    }
+    
+    li[data-is-self="true"] .header_c19a55 .timestamp_c19a55 {
+        color: var(--corrutheme-chat-selfcolor);
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55:has(.avatar_c19a55):before {
+        border-color: var(--corrutheme-chat-selfcolor) !important;
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
+        border-color: var(--corrutheme-chat-selfcolor);
+    }
+    
+    li[data-is-self="true"] .before_subtext_ada32f, .subtext_ada32f {
+        color: var(--corrutheme-chat-selfcolor);
+    }
+    
+    li[data-is-self="true"] .container_b7e1cb, 
+    li[data-is-self="true"] .contents_c19a55 {
+        border-color: var(--corrutheme-chat-selfcolor) !important;
+    }

@@ -1,0 +1,14 @@
+/**
+ * @name        corru.theme.akizet
+ * @author      jelleejamm
+ * @description become akizet! corru.theme (https://github.com/jelleejamm/corru.theme/) and the themeattributes plugin are required
+ * @version     0.0.9999
+ */
+
+:root {
+    --corrutheme-chat-selfcolor: #ff00ff !important;
+}
+
+li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 {
+    letter-spacing: 0.25em;
+}

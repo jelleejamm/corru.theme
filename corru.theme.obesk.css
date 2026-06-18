@@ -1,0 +1,12 @@
+/**
+ * @name        corru.theme.obesk
+ * @author      jelleejamm
+ * @description obeskis every message! corru.theme (https://github.com/jelleejamm/corru.theme/) required
+ * @version     0.0.9999
+ */
+
+:root {
+    --corrutheme-chat-outline-color: var(--obesk-color);
+    --corrutheme-chat-outline-color-results: var(--obesk-color);
+    --corrutheme-chat-results-avatar-border-radius: 100%;
+}
