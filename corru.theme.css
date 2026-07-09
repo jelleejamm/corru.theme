@@ -179,6 +179,14 @@ unnecessary
     100% { transform: rotate(10deg) }
 }
 
+@keyframes click-to-proceed {
+    0% { opacity: 0; transform: translateY(-10px)}
+    25% { opacity: 1; transform: translateY(-5px)}
+    50% { opacity: 1; transform: translateY(0px)}
+    75% { opacity: 1; transform: translateY(5px)}
+    100% { opacity: 0; transform: translateY(10px)}
+}
+
 /* actual shit go */
 
 :root { 
@@ -236,12 +244,57 @@ unnecessary
     --neutral-69: var(--dark-color) !important;
     --neutral-73: var(--dark-color) !important;
     --neutral-23: var(--bright-color) !important;
+    --neutral-91: var(--dark-color) !important;
     --icon-muted: var(--bright-color) !important;
+    --green-360: var(--friend-color);
+    --primary-660: var(--dark-color);
+    --green-new-22: var(--friend-color);
+    --yellow-300: var(--neutral-color);
     
     --corrutheme-chat-outline-color: var(--bright-color);
     --corrutheme-chat-outline-color-results: var(--bright-color);
     --corrutheme-chat-results-avatar-border-radius: 0%;
     --corrutheme-chat-selfcolor: var(--bright-color);
+}
+
+.blobContainer_e5445c .svg_cc5dd2 foreignObject, 
+.folderButton__48112 .svg_cc5dd2 foreignObject,
+.folderGroupBackground__48112,
+.folderButtonInner__48112,
+.folderIcon__48112 {
+    mask: none !important;
+    border-radius: 0 !important;
+}
+
+.imageWrapper,
+.embedFull__623de, .embedContainer__299eb, .spoilerMarkdownContent__299eb,
+.jumpToPresentBar__0f481.bottomBar__0f481.barBase__0f481,
+.container_e131a9, .panels__5e434, .result__2dc39, .result__2dc39::after, .gif__2dc39, .contentWrapper__08434,
+.categoryFade_d02962, .categoryFadeBlurple_d02962 {
+    border-radius: 0 !important;
+}
+
+.jumpToPresentBar__0f481 .barButtonMain__0f481.barButtonBase__0f481 {
+    text-transform: uppercase;
+    animation: click-to-proceed 1s linear infinite !important;
+}
+
+.jumpToPresentBar__0f481 .barButtonMain__0f481.barButtonBase__0f481:before {
+    content: "VVV ";
+}
+
+.jumpToPresentBar__0f481 .button_a22cb0.sm_a22cb0.primary_a22cb0.hasText_a22cb0 {
+    border-radius: 0 !important;
+    color: var(--bright-color) !important;
+    background-color: var(--dark-color) !important;
+    border: 0 !important;
+    text-transform: uppercase;
+    padding-right: 12px;
+    animation: click-to-proceed 1s linear infinite !important;
+}
+
+.jumpToPresentBar__0f481 .button_a22cb0.sm_a22cb0.primary_a22cb0.hasText_a22cb0:after {
+    content: " VVV";
 }
 
 .vc-voice-download {
@@ -258,8 +311,14 @@ unnecessary
     opacity: 1;
 }
 
-.avatar__44b0c, .wrapper__44b0c {
+.avatar__44b0c,
+.wrapper__44b0c,
+.sidebarListRounded__5e434,
+.folderPreviewWrapper__48112,
+.folderPreview__48112 .icon_f34534,
+.folderButtonContent__48112 {
     border-radius: 0 !important;
+    border-start-start-radius: 0 !important;
 }
 
 .searchResult__80bf8 .avatar_c19a55 {
@@ -483,7 +542,8 @@ code.inline {
 .container_c9d15c.textXs_c9d15c div,
 .tooltipContent_c36707,
 .tooltipContent__4e35b div,
-.button_a22cb0.primary_a22cb0 div div span, .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0), .button__201d5 {
+.button_a22cb0.primary_a22cb0 div div span, .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0), .button__201d5,
+.vc-bi-header-text {
     font-family: "spacemono", monospace !important;
 }
 
@@ -537,6 +597,34 @@ code.inline {
     color: var(--bright-color) !important;
 }
 
+.containerDefault_c69b6d .link__2ea32, .containerDefault_c69b6d .link__2ea32:hover {
+    border-radius: 0 !important;
+    background-color: transparent;
+}
+
+.link__2ea32, .iconItem_c69b6d {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.containerDefault_c69b6d .link__2ea32:before {
+    border-radius: 0 !important;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.containerDefault_c69b6d .link__2ea32:hover:before {
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
+    background-size: 100% 100%;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.unread__629e4 .unreadBar__629e4 {
+    color: var(--dark-color);
+    background-color: var(--obesk-color);
+    border-radius: 0 !important;
+}
+
 .container__2637a {
     background-color: var(--dark-color) !important;
 }
@@ -570,6 +658,12 @@ code.inline {
 }
 
 .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b {
+    border: 1px dashed var(--color, var(--bright-color));
+    border-radius: 0px !important;
+    background-color: var(--dark-color);
+}
+
+.hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39 {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
@@ -1119,7 +1213,6 @@ article {
 }    
 
 .guildInviteContainer__083ae {
-    display: flex;
     flex-direction: column;
     font-family: barcodetext;
     background: var(--dark-color);
@@ -1129,7 +1222,6 @@ article {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
     cursor: pointer;
     border-radius: 0;
 }
@@ -1196,6 +1288,32 @@ article {
 }
 
 .container__0f084:focus-within {
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/cneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
+    box-shadow: 0px 0px 5px var(--friend-color);
+}
+
+.DraftEditor-editorContainer div[data-contents="true"] span[data-text="true"] {
+    font-family: 'beech', 'spacemono' !important;
+    color: var(--friend-color);
+}
+
+.public-DraftEditorPlaceholder-inner {
+    color: transparent;
+}
+
+.search_c322aa {
+    z-index: 105;
+    border: 0;
+    text-align: center;
+    font-family: 'beech', 'spacemono' !important;
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/mneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
+    background-color: black;
+    box-shadow: 0px 0px 5px var(--obesk-color);
+    color: var(--friend-color);
+    border-radius: 100px;
+}
+
+.search_c322aa:focus-within {
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/cneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
     box-shadow: 0px 0px 5px var(--friend-color);
 }
