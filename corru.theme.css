@@ -230,6 +230,7 @@ unnecessary
     --reaction-text-default: var(--bright-color);
     --custom-bg-surface-overlay: rgba(0, 0, 0, .8);
     --neutral-60: var(--dark-color) !important;
+    --neutral-62: var(--dark-color) !important;
     --neutral-64: var(--dark-color) !important;
     --neutral-66: var(--dark-color) !important;
     --neutral-69: var(--dark-color) !important;
@@ -586,11 +587,15 @@ code.inline {
     color: var(--neutral-color) !important;
 }
 
-.descriptionClamp_f5f93a .markup__75297 div, .profileBody__9c3be .markup__75297 .defaultColor__4bd52 {
+.descriptionClamp_f5f93a .markup__75297 div,
+.profileBody__9c3be .markup__75297 .defaultColor__4bd52,
+.profileBody__9c3be .markup__75297 .text-sm\/normal_cf4812 {
     color: var(--obesk-color) !important;
 }
 
-.descriptionClamp_f5f93a .markup__75297 div:before, .profileBody__9c3be .markup__75297 .defaultColor__4bd52:before {
+.descriptionClamp_f5f93a .markup__75297 div:before,
+.profileBody__9c3be .markup__75297 .defaultColor__4bd52:before,
+.profileBody__9c3be .markup__75297 .text-sm\/normal_cf4812:before {
     content: '::INHERITED CONTEXT::';
     color: var(--neutral-color) !important;
     display: block;

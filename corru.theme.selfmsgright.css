@@ -60,6 +60,10 @@
         border-color: var(--bright-color);
     }
     
+    li[data-is-self="true"] .groupStart__5126c:has(.repliedMessage_c19a55) .contents_c19a55:has(.avatar_c19a55):before {
+        top: 55px;
+    }
+    
     li[data-is-self="true"] .header_c19a55 {
         text-align: right;
     }
