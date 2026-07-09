@@ -266,11 +266,11 @@ unnecessary
     border-radius: 0 !important;
 }
 
-.imageWrapper,
+.imageWrapper, .galleryItem_d75751::after,
 .embedFull__623de, .embedContainer__299eb, .spoilerMarkdownContent__299eb,
 .jumpToPresentBar__0f481.bottomBar__0f481.barBase__0f481,
 .container_e131a9, .panels__5e434, .result__2dc39, .result__2dc39::after, .gif__2dc39, .contentWrapper__08434,
-.categoryFade_d02962, .categoryFadeBlurple_d02962 {
+.categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img {
     border-radius: 0 !important;
 }
 
@@ -616,6 +616,37 @@ code.inline {
     background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
     background-size: 100% 100%;
     transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.interactive_f88cfd, .interactive_f88cfd:hover, .container_df39b2, .container_df39b2:hover {
+    border-radius: 0 !important;
+    background: transparent;
+}
+
+.interactive_f88cfd::before {
+    content: "";
+    position: absolute;
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    inset: 0;
+}
+
+.interactive_f88cfd:hover::before {
+    opacity: 1;
+}
+
+.childContainer__91a9d::before {
+    content: "";
+    position: absolute;
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    inset: 0;
+}
+
+.childContainer__91a9d:hover::before {
     opacity: 1;
 }
 
