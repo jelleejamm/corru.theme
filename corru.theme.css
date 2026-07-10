@@ -5,8 +5,6 @@
  * @version     0.0.9999
  */
 
-/* font defs that i just stole from the corru site LOL */
-
 .vc-addon-card:has([title="theme based on corru.observer https:\/\/corru.observer"]){
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantbsteli.png");
     background-repeat: no-repeat;
@@ -64,6 +62,7 @@ unnecessary
 	image-rendering: -moz-crisp-edges;
 }
 
+/* font defs that i just stole from the corru site LOL */
 
 @font-face {
     font-family: 'beech';
@@ -267,8 +266,20 @@ unnecessary
 .folderButtonInner__48112,
 .folderIcon__48112,
 .avatarWrapper_fb62e2 foreignObject,
-.listItem__650eb foreignObject {
+.listItem__650eb foreignObject,
+.wrapper__44b0c.headerAvatar__00943 foreignObject {
     mask: none !important;
+    border-radius: 0 !important;
+}
+
+.imageWrapper, .galleryItem_d75751::after,
+.embedFull__623de, .embedContainer__299eb, .spoilerMarkdownContent__299eb,
+.jumpToPresentBar__0f481.bottomBar__0f481.barBase__0f481,
+.container_e131a9, .panels__5e434, .result__2dc39, .result__2dc39::after, .gif__2dc39, .contentWrapper__08434,
+.categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img,
+.border__2f4f7, .tile__2f4f7.tile__90dc5, .voiceChannelEffectsContainer__2f4f7 .avatarWrapper_fb62e2,
+.experimentOverlayTitle__2f4f7, .eyebrow__463b7,
+.listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943 {
     border-radius: 0 !important;
 }
 
@@ -333,17 +344,6 @@ if only discord were nicer...
     text-transform: uppercase;
 }
 
-.imageWrapper, .galleryItem_d75751::after,
-.embedFull__623de, .embedContainer__299eb, .spoilerMarkdownContent__299eb,
-.jumpToPresentBar__0f481.bottomBar__0f481.barBase__0f481,
-.container_e131a9, .panels__5e434, .result__2dc39, .result__2dc39::after, .gif__2dc39, .contentWrapper__08434,
-.categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img,
-.border__2f4f7, .tile__2f4f7.tile__90dc5, .voiceChannelEffectsContainer__2f4f7 .avatarWrapper_fb62e2,
-.experimentOverlayTitle__2f4f7, .eyebrow__463b7,
-.listItem__650eb {
-    border-radius: 0 !important;
-}
-
 .jumpToPresentBar__0f481 .barButtonMain__0f481.barButtonBase__0f481 {
     text-transform: uppercase;
     animation: click-to-proceed 1s linear infinite !important;
@@ -402,6 +402,52 @@ if only discord were nicer...
     height: 50px;
 }
 
+.itemCard__7e549.interactive_bf1984 {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--friend-color);
+    border-radius: 0;
+}
+
+.wrapper__44b0c.headerAvatar__00943 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--friend-color);
+    width: 42px !important;
+    height: 42px !important;
+    overflow: visible;
+}
+
+.wrapper__44b0c.headerAvatar__00943 .avatarStack__44b0c {
+    animation: none;
+}
+
+.wrapper__44b0c.headerAvatar__00943 .avatar__44b0c, .wrapper__44b0c.headerAvatar__00943 foreignObject, .wrapper__44b0c.headerAvatar__00943 svg {
+    width: 41px !important;
+    height: 41px !important;
+}
+
+.wrapper__44b0c.headerAvatar__00943 svg {
+    contain: none !important;
+    overflow: visible !important;
+}
+
+.wrapper__44b0c.headerAvatar__00943 svg g {
+    color: var(--dark-color) !important;
+    transform: translate(25px, -16px);
+}
+
+.headerFull__00943 div div.defaultColor__4bd52 {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: var(--friend-color);
+    padding-left: 20px;
+}
+
+.headerFull__00943 div div.textContent__00943:not(.defaultColor__4bd52) {
+    padding-left: 5px;
+}
+
 .searchResult__80bf8 .markup__75297.messageContent_c19a55 {
     margin-left: 40px;
     color: var(--corrutheme-chat-outline-color-results);
@@ -458,6 +504,19 @@ foreignObject[mask="url(#«rkip»)"] {
     border-radius: 0 !important;
 }*/
 
+.peopleColumn__133bf {
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/fadeinlonghalf.gif'), url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ccontours.gif');
+    background-size: auto 100%;
+}
+
+.peopleListItem_cc6179 {
+    background-color: var(--dark-color) !important;
+    opacity: 1;
+    border-radius: 0 !important;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .audioMetadata_cf09d8::before, .icon__0ccae {
     filter: hue-rotate(-60deg);
@@ -590,14 +649,71 @@ code.inline {
     border-radius: 0 !important;
 }
 
+.audioButtonParent__5e764 .plated__67645 .contents__201d5 .lottieIcon__5eb9b svg {
+    display: initial !important;
+}
+
+/*
+.buttons__37e49 .lottieIcon__5eb9b {
+    transition: transform 1s cubic-bezier(.33,.63,.14,.99);
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+i wanted to add the ingame animation it has here but it looks like shit, readd it if you wish
+.buttons__37e49 .lottieIcon__5eb9b:hover {
+    transform: rotateY(-360deg);
+}*/
+
+.buttons__37e49 .plated__67645 .contents__201d5 .lottieIcon__5eb9b svg {
+    display: none;
+}
+
+.buttons__37e49 .contents__201d5 .lottieIcon__5eb9b:after {
+    content: "\e90b ";
+    font-family: 'corruicons';
+    color: var(--bright-color);
+    visibility: visible;
+    margin-top: 10px;
+}
+
+.audioButtonParent__5e764 .plated__67645 .contents__201d5 .lottieIcon__5eb9b:after {
+    content: none !important;
+}
+
+.title_edbb22 svg {
+    display: none;
+}
+
+.title_edbb22:has(svg):before {
+    content: "\e908 ";
+    font-family: 'corruicons';
+    color: var(--bright-color);
+    visibility: visible;
+    padding-left: 3px;
+    padding-right: 2px;
+}
+
 .friendsButtonContainer_e6b769 .avatar__20a53 svg.linkButtonIcon__972a0 {
     display: none;
 }
 
 .friendsButtonContainer_e6b769 .avatar__20a53:after {
-    content: "\e908 ";
+    content: "\e906 ";
     font-family: 'corruicons';
-    color: white;
+    color: var(--bright-color);
+    visibility: visible;
+    padding-left: 3px;
+    padding-right: 2px;
+}
+
+.container__9293f .children__9293f.scrollable__9293f .iconWrapper__9293f svg {
+    display: none;
+}
+
+.container__9293f .children__9293f.scrollable__9293f .iconWrapper__9293f:after {
+    content: "\e906 ";
+    font-family: 'corruicons';
+    color: var(--bright-color);
     visibility: visible;
     padding-left: 3px;
     padding-right: 2px;
@@ -635,7 +751,7 @@ code.inline {
     border-radius: 0px !important;
 }
 
-.guildBadgeAndName_f37cb1 .name_f37cb1 {
+.guildBadgeAndName_f37cb1 .name_f37cb1, .title_edbb22 .defaultColor__4bd52 {
     color: var(--dark-color);
     font-family: barcodetext;   
     font-size: 32px;
@@ -643,10 +759,14 @@ code.inline {
     text-transform: uppercase;
 }
 
-.guildBadgeAndName_f37cb1 .name_f37cb1:before {
+.title_edbb22 .defaultColor__4bd52 {
+    color: var(--bright-color);
+}
+
+.guildBadgeAndName_f37cb1 .name_f37cb1:before, .title_edbb22 .defaultColor__4bd52:before {
     content: "..__";
 }
-.guildBadgeAndName_f37cb1 .name_f37cb1:after {
+.guildBadgeAndName_f37cb1 .name_f37cb1:after, .title_edbb22 .defaultColor__4bd52:after {
     content: "__..";
 }
 
@@ -778,7 +898,7 @@ code.inline {
     background-color: var(--dark-color);
 }
 
-.hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39 {
+.hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
@@ -1399,7 +1519,7 @@ article {
     text-align: center;
     font-family: 'beech', 'spacemono' !important;
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/mneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
-    background-color: black;
+    background-color: var(--dark-color);
     box-shadow: 0px 0px 5px var(--obesk-color);
     color: var(--friend-color);
     border-radius: 100px;
@@ -1425,7 +1545,7 @@ article {
     text-align: center;
     font-family: 'beech', 'spacemono' !important;
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/mneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
-    background-color: black;
+    background-color: var(--dark-color);
     box-shadow: 0px 0px 5px var(--obesk-color);
     color: var(--friend-color);
     border-radius: 100px;
@@ -1462,6 +1582,10 @@ rect[fill="#45a366"], .vc-platform-indicator svg[fill="#45a366"], .icon_c9d15c p
 
 rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
     fill: var(--obesk-color) !important;
+}
+
+rect[fill="#84858d"], .vc-platform-indicator svg[fill="#84858d"] {
+    fill: var(--bright-color) !important;
 }
 
 foreignObject[mask="url(#svg-mask-status-online)"] div {
