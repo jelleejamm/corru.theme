@@ -291,7 +291,7 @@ unnecessary
 
 /* bleach area */
 
-.item_caf372, .item_e4d939, .linkButtonIcon__972a0 {
+.item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b {
     color: var(--bright-color);
     fill: var(--bright-color);
 }
@@ -1445,16 +1445,16 @@ svg .mask__44b0c {
     color: var(--friend-color);
 }
 
-.link__2ea32[aria-current="page"] .name__2ea32.overflow_b0dfc2 {
+.modeSelected__2ea32 .link__2ea32 .name__2ea32.overflow_b0dfc2 {
     color: var(--bright-color);
 }
 
-.link__2ea32[aria-current="page"], .interactiveSelected__972a0 {
+.modeSelected__2ea32 .link__2ea32, .interactiveSelected__972a0 {
     background-color: rgb(255,255,0,0.12);
     border-radius: 0 !important;
 }
 
-.containerDefault_c69b6d .link__2ea32[aria-current="page"]:before, .interactiveSelected__972a0:before {
+.containerDefault_c69b6d .modeSelected__2ea32 .link__2ea32:before, .interactiveSelected__972a0:before {
     background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
     opacity: 1;
 }
@@ -1468,7 +1468,7 @@ svg .mask__44b0c {
     fill: var(--friend-color);
 }
 
-.link__2ea32[aria-current="page"] .icon__2ea32 {
+.modeSelected__2ea32 .link__2ea32 .icon__2ea32 {
     color: var(--bright-color);
     fill: var(--bright-color);
 }
