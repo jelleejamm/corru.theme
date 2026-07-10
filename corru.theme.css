@@ -300,6 +300,10 @@ unnecessary
     color: var(--dark-color);
 }
 
+.username_c19a55:not(.usernameColorOnName_c19a55) {
+    color: var(--corrutheme-chat-outline-color);
+}
+
 /*
 .background_fb62e2 {
     justify-content: start;

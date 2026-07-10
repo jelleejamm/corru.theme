@@ -9,6 +9,10 @@
         --text-subtle: var(--corrutheme-chat-selfcolor);
     }
     
+    li[data-is-self="true"] .username_c19a55:not(.usernameColorOnName_c19a55) {
+        color: var(--corrutheme-chat-selfcolor);
+    }
+    
     li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .markup__75297.messageContent_c19a55 {
         color: var(--corrutheme-chat-selfcolor);
     }
