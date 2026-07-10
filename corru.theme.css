@@ -236,6 +236,7 @@ unnecessary
     --red-new-18: var(--obesk-color) !important;
     --reaction-text-default: var(--bright-color);
     --custom-bg-surface-overlay: rgba(0, 0, 0, .8);
+    --neutral-83: var(--dark-color) !important;
     --neutral-60: var(--dark-color) !important;
     --neutral-62: var(--dark-color) !important;
     --neutral-64: var(--dark-color) !important;
@@ -243,7 +244,12 @@ unnecessary
     --neutral-69: var(--dark-color) !important;
     --neutral-73: var(--dark-color) !important;
     --neutral-23: var(--bright-color) !important;
+    --neutral-82: var(--dark-color) !important;
+    --neutral-86: var(--dark-color) !important;
     --neutral-91: var(--dark-color) !important;
+    --neutral-92: var(--dark-color) !important;
+    --neutral-95: var(--dark-color) !important;
+    --plum-20: var(--dark-color) !important;
     --icon-muted: var(--bright-color) !important;
     --green-360: var(--friend-color);
     --green-300: var(--friend-color);
@@ -253,6 +259,7 @@ unnecessary
     --neutral-16: var(--bright-color);
     --opacity-red-12: rgb(255,0,255,0.12);
     --opacity-red-mysteryoneicantfind: rgb(255,0,255,0.16);
+    --opacity-20-hsl: transparent;
     
     --corrutheme-chat-outline-color: var(--bright-color);
     --corrutheme-chat-outline-color-results: var(--bright-color);
@@ -279,8 +286,19 @@ unnecessary
 .categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img,
 .border__2f4f7, .tile__2f4f7.tile__90dc5, .voiceChannelEffectsContainer__2f4f7 .avatarWrapper_fb62e2,
 .experimentOverlayTitle__2f4f7, .eyebrow__463b7,
-.listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943 {
+.listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf {
     border-radius: 0 !important;
+}
+
+/* bleach area */
+
+.item_caf372, .item_e4d939, .linkButtonIcon__972a0 {
+    color: var(--bright-color);
+    fill: var(--bright-color);
+}
+
+.addFriend__133bf span {
+    color: var(--dark-color);
 }
 
 /*
@@ -719,7 +737,6 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     padding-right: 2px;
 }
 
-
 .headerContainer__122e4 svg path {
     color: var(--bright-color);
     fill: var(--bright-color);
@@ -792,18 +809,13 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     fill: var(--dark-color) !important;
 }
 
-.icon__2ea32 {
-    color: var(--friend-color) !important;
-    fill: var(--friend-color) !important;
-}
-
 .scroller__629e4.thin_d125d2, .scroller__629e4.thin_d125d2 .content_d125d2 {
     color: var(--bright-color) !important;
 }
 
-.containerDefault_c69b6d .link__2ea32:hover {
+.containerDefault_c69b6d .link__2ea32:hover, .interactive_f88cfd:hover {
     border-radius: 0 !important;
-    background-color: transparent;
+    background-color: rgb(255,255,0,0.12);
 }
 
 .link__2ea32, .iconItem_c69b6d {
@@ -823,7 +835,7 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     opacity: 1;
 }
 
-.interactive_f88cfd:hover, .container_df39b2:hover {
+.container_df39b2:hover {
     border-radius: 0 !important;
     background: transparent;
 }
@@ -1421,16 +1433,45 @@ svg .mask__44b0c {
     line-height: 150%;
 }
 
-.modeUnreadImportant__2ea32 div {
-    color: var(--friend-color) !important;
-}
-
 .unreadImportant__2ea32 {
-    background-color: var(--friend-color) !important;
+    background-color: var(--bright-color) !important;
 }
 
 .name__2ea32.overflow_b0dfc2 {
+    color: var(--friend-color);
+}
+
+.link__2ea32[aria-current="page"] .name__2ea32.overflow_b0dfc2 {
     color: var(--bright-color);
+}
+
+.link__2ea32[aria-current="page"], .interactiveSelected__972a0 {
+    background-color: rgb(255,255,0,0.12);
+    border-radius: 0 !important;
+}
+
+.containerDefault_c69b6d .link__2ea32[aria-current="page"]:before, .interactiveSelected__972a0:before {
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
+    opacity: 1;
+}
+
+.modeUnreadImportant__2ea32 .link__2ea32 .name__2ea32.overflow_b0dfc2 {
+    color: var(--bright-color);
+}
+
+.modeUnreadImportant__2ea32 .icon__2ea32, .icon__2ea32 {
+    color: var(--friend-color);
+    fill: var(--friend-color);
+}
+
+.link__2ea32[aria-current="page"] .icon__2ea32 {
+    color: var(--bright-color);
+    fill: var(--bright-color);
+}
+
+.clickable__9293f .icon__9293f {
+    color: var(--bright-color);
+    fill: var(--bright-color);
 }
 
 .header_c19a55 .timestamp_c19a55 {
