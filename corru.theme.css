@@ -259,7 +259,6 @@ unnecessary
     --neutral-16: var(--bright-color);
     --opacity-red-12: rgb(255,0,255,0.12);
     --opacity-red-mysteryoneicantfind: rgb(255,0,255,0.16);
-    --opacity-20-hsl: transparent;
     
     --corrutheme-chat-outline-color: var(--bright-color);
     --corrutheme-chat-outline-color-results: var(--bright-color);
@@ -392,6 +391,12 @@ if only discord were nicer...
 .metadataSize_cf09d8 {
     color: var(--bright-color) !important;
     opacity: 1;
+}
+
+    
+.cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 pre, .codeContainer__75297 {
+    width: 100%;
+    max-width: 100% !important;
 }
 
 .fileInner__0ccae .text-xs\/normal_cf4812 {
@@ -591,7 +596,6 @@ code.inline {
 
 .scrollbarGhostHairline__506b3.scrollbar__506b3.hljs {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif");
-    text-align: right;
     color: var(--dark-color);
     border-color: var(--bright-color);
     border-radius: 0;

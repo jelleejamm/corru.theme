@@ -17,7 +17,7 @@
 
     li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 {
         padding-left: 0px !important;
-        margin-left: 0px !important;
+        margin-left: 10px !important;
     }
     
     li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) {
