@@ -247,9 +247,13 @@ unnecessary
     --neutral-91: var(--dark-color) !important;
     --icon-muted: var(--bright-color) !important;
     --green-360: var(--friend-color);
+    --green-300: var(--friend-color);
     --primary-660: var(--dark-color);
     --green-new-22: var(--friend-color);
     --yellow-300: var(--neutral-color);
+    --neutral-16: var(--bright-color);
+    --opacity-red-12: rgb(255,0,255,0.12);
+    --opacity-red-mysteryoneicantfind: rgb(255,0,255,0.16);
     
     --corrutheme-chat-outline-color: var(--bright-color);
     --corrutheme-chat-outline-color-results: var(--bright-color);
@@ -261,16 +265,82 @@ unnecessary
 .folderButton__48112 .svg_cc5dd2 foreignObject,
 .folderGroupBackground__48112,
 .folderButtonInner__48112,
-.folderIcon__48112 {
+.folderIcon__48112,
+.avatarWrapper_fb62e2 foreignObject,
+.listItem__650eb foreignObject {
     mask: none !important;
     border-radius: 0 !important;
+}
+
+/*
+.background_fb62e2 {
+    justify-content: start;
+}
+if only discord were nicer...
+.avatarWrapper_fb62e2 {
+    margin-left: 50px;
+    padding: 15px;
+}*/
+
+.overlayTitleText__2f4f7 {
+    font-family: barcodetext;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: 100 !important;
+    color: var(--friend-color);
+}
+
+.overlayBottom__2f4f7 {
+    justify-content: center;
+}
+
+.eyebrow__463b7 {
+    border-color: var(--dark-color);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.upperBadge_cc5dd2, .lowerBadge_cc5dd2 {
+    padding: 2px;
+}
+
+.newMessagesBar__0f481 {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif") !important;
+    background-color: unset;
+    background-size: auto 25%;
+    color: var(--dark-color);
+    border-color: var(--bright-color);
+    border-radius: 0;
+    height: 50px;
+}
+
+#NewMessagesBarJumpToNewMessages_10616 {
+    font-family: barcodetext, monospace !important;
+    font-weight: 100 !important;
+    text-shadow: 0px 0px var(--neutral-color);
+    font-size: 1.75rem;
+    line-height: 1.25em;
+    text-transform: lowercase;
+}
+
+#NewMessagesBarJumpToNewMessages_10616:after {
+    content: "'";
+}
+
+#NewMessagesBarJumpToNewMessages_10616:before {
+    content: "NOTICE::'";
+    text-transform: uppercase;
 }
 
 .imageWrapper, .galleryItem_d75751::after,
 .embedFull__623de, .embedContainer__299eb, .spoilerMarkdownContent__299eb,
 .jumpToPresentBar__0f481.bottomBar__0f481.barBase__0f481,
 .container_e131a9, .panels__5e434, .result__2dc39, .result__2dc39::after, .gif__2dc39, .contentWrapper__08434,
-.categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img {
+.categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img,
+.border__2f4f7, .tile__2f4f7.tile__90dc5, .voiceChannelEffectsContainer__2f4f7 .avatarWrapper_fb62e2,
+.experimentOverlayTitle__2f4f7, .eyebrow__463b7,
+.listItem__650eb {
     border-radius: 0 !important;
 }
 
@@ -520,6 +590,20 @@ code.inline {
     border-radius: 0 !important;
 }
 
+.friendsButtonContainer_e6b769 .avatar__20a53 svg.linkButtonIcon__972a0 {
+    display: none;
+}
+
+.friendsButtonContainer_e6b769 .avatar__20a53:after {
+    content: "\e908 ";
+    font-family: 'corruicons';
+    color: white;
+    visibility: visible;
+    padding-left: 3px;
+    padding-right: 2px;
+}
+
+
 .headerContainer__122e4 svg path {
     color: var(--bright-color);
     fill: var(--bright-color);
@@ -597,7 +681,7 @@ code.inline {
     color: var(--bright-color) !important;
 }
 
-.containerDefault_c69b6d .link__2ea32, .containerDefault_c69b6d .link__2ea32:hover {
+.containerDefault_c69b6d .link__2ea32:hover {
     border-radius: 0 !important;
     background-color: transparent;
 }
@@ -619,7 +703,7 @@ code.inline {
     opacity: 1;
 }
 
-.interactive_f88cfd, .interactive_f88cfd:hover, .container_df39b2, .container_df39b2:hover {
+.interactive_f88cfd:hover, .container_df39b2:hover {
     border-radius: 0 !important;
     background: transparent;
 }
@@ -652,7 +736,7 @@ code.inline {
 
 .unread__629e4 .unreadBar__629e4 {
     color: var(--dark-color);
-    background-color: var(--obesk-color);
+    background-color: var(--bright-color);
     border-radius: 0 !important;
 }
 
@@ -873,7 +957,10 @@ div[aria-label="Preview Message"] {
     padding-top: 6px;
 }
 
-.button_a22cb0.primary_a22cb0, .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0):not(.md_a22cb0), .button__201d5.grow__201d5.lookFilled__201d5  {
+.button_a22cb0.primary_a22cb0,
+.button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0):not(.md_a22cb0),
+.button__201d5.grow__201d5.lookFilled__201d5,
+.newMessagesBar__0f481 .barButtonAlt__0f481 {
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     align-items: center;
     justify-content: center;
@@ -914,7 +1001,7 @@ div[aria-label="Preview Message"] {
     max-width: 190px;
 }
 
-.button_a22cb0:hover, .button__201d5:hover {
+.button_a22cb0:hover, .button__201d5:not(.videoButton_cf09d8):hover {
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     transform: translateY(-0.32rem);
 }
@@ -1377,6 +1464,22 @@ rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
     fill: var(--obesk-color) !important;
 }
 
+foreignObject[mask="url(#svg-mask-status-online)"] div {
+    background-color: var(--friend-color) !important;
+}
+
+foreignObject[mask="url(#svg-mask-status-idle)"] div {
+    background-color: var(--neutral-color) !important;
+}
+
+foreignObject[mask="url(#svg-mask-status-dnd)"] div {
+    background-color: var(--obesk-color) !important;
+}
+
+foreignObject[mask="url(#svg-mask-status-offline)"] div {
+    background-color: var(--bright-color) !important;
+}
+
 .timestampVisibleOnHover_c19a55 {
     display: none !important;
 }
@@ -1391,7 +1494,7 @@ rect[fill="#da3e44"], .vc-platform-indicator svg[fill="#da3e44"] {
     padding-inline-start: 0px !important;
 }
 
-.groupStart__5126c:has(.avatar_c19a55) {
+.groupStart__5126c:has(.avatar_c19a55):not(.backgroundFlash__5126c) {
     padding-inline-start: 100px;
 }
 
