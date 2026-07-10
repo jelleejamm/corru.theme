@@ -39,6 +39,11 @@
         inset-inline-end: var(--custom-message-margin-horizontal);
     }
     
+    li[data-is-self="true"] .groupStart__5126c::before { /* > jellee: do the pfp replacey thing */
+        inset-inline-start: unset !important;
+        inset-inline-end: var(--custom-message-margin-horizontal) !important;
+    }
+    
     li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55:has(.avatar_c19a55):before {
         content: "";
         display: block;
