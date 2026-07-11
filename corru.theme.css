@@ -285,7 +285,7 @@ unnecessary
 .categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img,
 .border__2f4f7, .tile__2f4f7.tile__90dc5, .voiceChannelEffectsContainer__2f4f7 .avatarWrapper_fb62e2,
 .experimentOverlayTitle__2f4f7, .upperBadge_cc5dd2 .eyebrow__463b7, .lowerBadge_cc5dd2 .eyebrow__463b7,
-.listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf {
+.listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf, .wrapperMediaMosaic_cf09d8, .video_cf09d8 {
     border-radius: 0 !important;
 }
 
@@ -294,6 +294,13 @@ unnecessary
 .item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b {
     color: var(--bright-color);
     fill: var(--bright-color);
+}
+
+/* yellow area */
+
+.ownerIcon__5d473 {
+    color: var(--neutral-color);
+    fill: var(--neutral-color);
 }
 
 .addFriend__133bf span {
@@ -352,7 +359,7 @@ if only discord were nicer...
     height: 50px;
 }
 
-#NewMessagesBarJumpToNewMessages_835 div div {
+.newMessagesBar__0f481 .barButtonMain__0f481 span div div {
     font-family: barcodetext, monospace !important;
     font-weight: 100 !important;
     text-shadow: 0px 0px var(--neutral-color);
@@ -361,11 +368,11 @@ if only discord were nicer...
     text-transform: lowercase;
 }
 
-#NewMessagesBarJumpToNewMessages_835 div div:after {
+.newMessagesBar__0f481 .barButtonMain__0f481 div div:after {
     content: "'";
 }
 
-#NewMessagesBarJumpToNewMessages_835 div div:before {
+.newMessagesBar__0f481 .barButtonMain__0f481 div div:before {
     content: "NOTICE::'";
     text-transform: uppercase;
 }
@@ -608,7 +615,7 @@ code.inline {
     margin: 2.5px;
 }
 
-.scrollbarGhostHairline__506b3.scrollbar__506b3.hljs {
+.markup__75297.messageContent_c19a55 .scrollbarGhostHairline__506b3.scrollbar__506b3.hljs {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif");
     color: var(--dark-color);
     border-color: var(--bright-color);
@@ -846,7 +853,7 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     opacity: 0;
 }
 
-.containerDefault_c69b6d .link__2ea32:hover:before {
+.containerDefault_c69b6d .link__2ea32:hover:before, .selected__91a9d .childContainer__91a9d {
     background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
     background-size: 100% 100%;
     transition: opacity 0.2s ease-in-out;
@@ -880,8 +887,9 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     inset: 0;
 }
 
-.childContainer__91a9d:hover::before {
+.childContainer__91a9d:hover::before, .selected__91a9d .childContainer__91a9d {
     opacity: 1;
+    background-color: rgb(255,255,0,0.12);
 }
 
 .unread__629e4 .unreadBar__629e4 {
