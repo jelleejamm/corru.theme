@@ -291,13 +291,17 @@ unnecessary
 .experimentOverlayTitle__2f4f7, .upperBadge_cc5dd2 .eyebrow_cf4812, .lowerBadge_cc5dd2 .eyebrow_cf4812,
 .listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf, .wrapperMediaMosaic_cf09d8, .video_cf09d8,
 .wrapperAudio_cf09d8, .fakeEdges_b26b79:before, .fakeEdges_b26b79:after, .unreadMentionsBar_ef3116, .eyebrow_cf4812,
-.disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a {
+.disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a, .liveIndicator__30845,
+.mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60 {
     border-radius: 0 !important;
 }
 
+/* usernameFont__07f91 text-sm/medium__07f91 username__07f91 usernameSpeaking__07f91 */
+
 /* bleach area */
 
-.item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b {
+.item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b, .username__07f91, .statusText__5cda9,
+.channelIcon__9293f svg, .channelStatus__49508 {
     color: var(--bright-color);
     fill: var(--bright-color);
 }
@@ -311,9 +315,23 @@ unnecessary
 
 /* black tar heroin area */
 
-.sortDropdownTextHighContrastForcedColor_f369db, .addFriend__133bf span {
+.sortDropdownTextHighContrastForcedColor_f369db, .addFriend__133bf span, .isCurrentUserConnected__650eb .icon__463b7 {
     color: var(--dark-color);
     fill: var(--dark-color);
+}
+
+/* blue area */
+
+.usernameSpeaking__07f91 {
+    color: var(--friend-color);
+    fill: var(--friend-color);
+}
+
+/* obesk area */
+
+.icon__07f91 {
+    color: var(--obesk-color);
+    fill: var(--obesk-color);
 }
 
 .username_c19a55:not(.usernameColorOnName_c19a55) {
