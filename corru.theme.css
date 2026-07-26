@@ -266,6 +266,10 @@ unnecessary
     --corrutheme-chat-selfcolor: var(--bright-color);
 }
 
+*::selection {
+    background: var(--obesk-color);
+}
+
 .blobContainer_e5445c .svg_cc5dd2 foreignObject, 
 .folderButton__48112 .svg_cc5dd2 foreignObject,
 .folderGroupBackground__48112,
@@ -287,7 +291,7 @@ unnecessary
 .experimentOverlayTitle__2f4f7, .upperBadge_cc5dd2 .eyebrow_cf4812, .lowerBadge_cc5dd2 .eyebrow_cf4812,
 .listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf, .wrapperMediaMosaic_cf09d8, .video_cf09d8,
 .wrapperAudio_cf09d8, .fakeEdges_b26b79:before, .fakeEdges_b26b79:after, .unreadMentionsBar_ef3116, .eyebrow_cf4812,
-.disconnect_f1ceac, .buttonSection__1405b {
+.disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a {
     border-radius: 0 !important;
 }
 
@@ -316,7 +320,7 @@ unnecessary
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8 {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9 {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
 }
@@ -364,7 +368,7 @@ if only discord were nicer...
     height: 50px;
 }
 
-.newMessagesBar__0f481 .barButtonMain__0f481 span div div {
+.newMessagesBar__0f481 .span__0f481 {
     font-family: barcodetext, monospace !important;
     font-weight: 100 !important;
     text-shadow: 0px 0px var(--neutral-color);
@@ -373,11 +377,11 @@ if only discord were nicer...
     text-transform: lowercase;
 }
 
-.newMessagesBar__0f481 .barButtonMain__0f481 div div:after {
+.newMessagesBar__0f481 .span__0f481:after {
     content: "'";
 }
 
-.newMessagesBar__0f481 .barButtonMain__0f481 div div:before {
+.newMessagesBar__0f481 .span__0f481:before {
     content: "NOTICE::'";
     text-transform: uppercase;
 }
@@ -925,7 +929,8 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
 
 .buttonsInner__5126c.popover_f84418.wrapper_f7ecac, .buttonSection__1405b,
 .menu_c1e9c4, .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b,
-.hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb {
+.hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
+.tooltip_fa450d {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
@@ -1120,11 +1125,6 @@ div[aria-label="Preview Message"] {
     border-bottom-color: var(--neutral-color) !important;
 }
 
-.button__201d5.grow__201d5.lookFilled__201d5 {
-    padding-bottom: calc(0.16rem + 12.5px);
-    padding-top: calc(0.16rem + 12.5px);
-}
-
 .button_a22cb0.md_a22cb0.secondary_a22cb0.hasText_a22cb0, .watchStreamRow__43481 .button_a22cb0 {
     border-radius: 0;
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
@@ -1139,6 +1139,20 @@ div[aria-label="Preview Message"] {
     box-shadow: -5px 0px 5px var(--friend-color);
 }
 
+.button__201d5.grow__201d5.lookFilled__201d5 {
+    padding-bottom: calc(0.16rem + 12.5px);
+    padding-top: calc(0.16rem + 12.5px);
+}
+
+.button_a22cb0.md_a22cb0.secondary_a22cb0.hasText_a22cb0:hover, .watchStreamRow__43481 .button_a22cb0:hover,
+.button_a22cb0.primary_a22cb0:hover,
+.button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0):not(.md_a22cb0):hover,
+.button__201d5.grow__201d5.lookFilled__201d5:hover,
+.newMessagesBar__0f481 .barButtonAlt__0f481:hover {
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    transform: translateY(-0.32rem);
+}
+
 .md_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0 {
     padding: 0;
     padding-left: 5px; padding-right: 5px;
@@ -1146,11 +1160,6 @@ div[aria-label="Preview Message"] {
 
 .didRender_faf9c0 #emoji-picker-tab-panel.wrapper_c0e32c .container__72c38 {
     max-width: 190px;
-}
-
-.button_a22cb0:hover, .button__201d5:not(.videoButton_cf09d8):hover {
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
-    transform: translateY(-0.32rem);
 }
 
 /* button__201d5lookFilled__201d5 colorBrand__201d5 sizeSmall__201d5 grow__201d5*/
@@ -1337,7 +1346,6 @@ div[aria-label="Preview Message"] {
     background-repeat: no-repeat;
     animation: SPIN 30s linear infinite;
     display: block;
-    z-index: 70 !important;
     top: 5px;
     height: 58px;
     width: 58px;
@@ -1696,7 +1704,7 @@ disabling because i think i broke something with this? unsure
     color: var(--bright-color) !important;
 }
 
-.tooltipPointer_c36707, .caret__5bc6a {
+.tooltipPointer_c36707, .caret__5bc6a, .caret__0b5f9 {
     display: none !important;
 }
 
