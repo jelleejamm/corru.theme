@@ -292,7 +292,8 @@ unnecessary
 .listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf, .wrapperMediaMosaic_cf09d8, .video_cf09d8,
 .wrapperAudio_cf09d8, .fakeEdges_b26b79:before, .fakeEdges_b26b79:after, .unreadMentionsBar_ef3116, .eyebrow_cf4812,
 .disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a, .liveIndicator__30845,
-.mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60 {
+.mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60, .upload_aa605f, .media__41ea0, .attachmentContainer__299eb,
+.spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481 {
     border-radius: 0 !important;
 }
 
@@ -301,21 +302,21 @@ unnecessary
 /* bleach area */
 
 .item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b, .username__07f91, .statusText__5cda9,
-.channelIcon__9293f svg, .channelStatus__49508 {
+.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac {
     color: var(--bright-color);
     fill: var(--bright-color);
 }
 
 /* yellow area */
 
-.ownerIcon__5d473 {
+.ownerIcon__5d473, .mediaMosaicAltTextPopoutDescription__0f481 {
     color: var(--neutral-color);
     fill: var(--neutral-color);
 }
 
 /* black tar heroin area */
 
-.sortDropdownTextHighContrastForcedColor_f369db, .addFriend__133bf span, .isCurrentUserConnected__650eb .icon__463b7 {
+.sortDropdownTextHighContrastForcedColor_f369db, .addFriend__133bf span, .isCurrentUserConnected__650eb .icon__463b7, .mediaMosaicAltText__0f481 {
     color: var(--dark-color);
     fill: var(--dark-color);
 }
@@ -329,18 +330,39 @@ unnecessary
 
 /* obesk area */
 
-.icon__07f91 {
+.icon__07f91, .mediaMosaicAltTextPopoutTitle__0f481 {
     color: var(--obesk-color);
     fill: var(--obesk-color);
+}
+
+.altTag__41ea0, .mediaMosaicAltText__0f481, .mediaMosaicAltText__0f481:focus, .mediaMosaicAltText__0f481:hover {
+    background-color: var(--friend-color);
+    mix-blend-mode: normal !important;
+}
+
+.mediaMosaicAltText__0f481:hover {
+    background-color: var(--neutral-color);
+}
+
+.mediaMosaicAltTextPopoutTitle__0f481 {
+    text-transform: uppercase;
+}
+
+.mediaMosaicAltTextPopoutTitle__0f481:after, .mediaMosaicAltTextPopoutTitle__0f481:before {
+    content: '::';
 }
 
 .username_c19a55:not(.usernameColorOnName_c19a55) {
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9 {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
+}
+
+.upload_aa605f {
+    border-color: var(--bright-color);
 }
 
 /*
@@ -948,7 +970,7 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
 .buttonsInner__5126c.popover_f84418.wrapper_f7ecac, .buttonSection__1405b,
 .menu_c1e9c4, .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b,
 .hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
-.tooltip_fa450d {
+.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481 {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
