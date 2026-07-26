@@ -236,6 +236,7 @@ unnecessary
     --red-new-18: var(--obesk-color) !important;
     --reaction-text-default: var(--bright-color);
     --custom-bg-surface-overlay: rgba(0, 0, 0, .8);
+    --primary-500: var(--dark-color) !important;
     --neutral-83: var(--dark-color) !important;
     --neutral-60: var(--dark-color) !important;
     --neutral-62: var(--dark-color) !important;
@@ -293,7 +294,7 @@ unnecessary
 .wrapperAudio_cf09d8, .fakeEdges_b26b79:before, .fakeEdges_b26b79:after, .unreadMentionsBar_ef3116, .eyebrow_cf4812,
 .disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a, .liveIndicator__30845,
 .mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60, .upload_aa605f, .media__41ea0, .attachmentContainer__299eb,
-.spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481 {
+.spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91 {
     border-radius: 0 !important;
 }
 
@@ -408,13 +409,17 @@ if only discord were nicer...
     height: 50px;
 }
 
-.newMessagesBar__0f481 .span__0f481 {
+.newMessagesBar__0f481 .span__0f481, .newMessagesBar__0f481 .span__0f481 div div {
     font-family: barcodetext, monospace !important;
     font-weight: 100 !important;
     text-shadow: 0px 0px var(--neutral-color);
     font-size: 1.75rem;
     line-height: 1.25em;
     text-transform: lowercase;
+}
+
+.newMessagesBar__0f481 .span__0f481 div {
+    display: inline !important;
 }
 
 .newMessagesBar__0f481 .span__0f481:after {
@@ -941,6 +946,24 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     background-color: rgb(255,255,0,0.12);
 }
 
+.content__07f91::before, .selected__07f91 .content__07f91 {
+    content: "";
+    position: absolute;
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg');
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    inset: 0;
+}
+
+.selected__07f91 .content__07f91 .container__394db .username__07f91, .content__07f91:hover .username__07f91 {
+    color: var(--neutral-color) !important;
+}
+
+.content__07f91:hover::before, .selected__07f91 .content__07f91 {
+    opacity: 1;
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg'), rgb(255,255,0,0.12) !important;
+}
+
 .unread__629e4 .unreadBar__629e4 {
     color: var(--dark-color);
     background-color: var(--bright-color);
@@ -970,7 +993,7 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
 .buttonsInner__5126c.popover_f84418.wrapper_f7ecac, .buttonSection__1405b,
 .menu_c1e9c4, .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b,
 .hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
-.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481 {
+.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
