@@ -43,7 +43,7 @@
         color: var(--dark-color) !important;
     }
 
-    li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .username_c19a55, li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 .messageContent_c19a55 {
+    li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .username_c19a55, li[data-is-self="true"] .hasReply_c19a55 .repliedMessage_c19a55 .repliedTextPreview_c19a55 .repliedTextContent_c19a55.messageContent_c19a55 {
         font-family: "spacemono", monospace !important;
         background: var(--dark-color) !important;
         color: var(--bright-color) !important;
