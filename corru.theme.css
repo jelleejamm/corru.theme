@@ -302,7 +302,8 @@ unnecessary
 .wrapperAudio_cf09d8, .fakeEdges_b26b79:before, .fakeEdges_b26b79:after, .unreadMentionsBar_ef3116, .eyebrow_cf4812,
 .disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a, .liveIndicator__30845,
 .mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60, .upload_aa605f, .media__41ea0, .attachmentContainer__299eb,
-.spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91 {
+.spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91,
+.vc-banners-everywhere-memberlist {
     border-radius: 0 !important;
 }
 
@@ -342,6 +343,11 @@ unnecessary
 .icon__07f91, .mediaMosaicAltTextPopoutTitle__0f481 {
     color: var(--obesk-color);
     fill: var(--obesk-color);
+}
+
+.link__972a0 {
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .altTag__41ea0, .mediaMosaicAltText__0f481, .mediaMosaicAltText__0f481:focus, .mediaMosaicAltText__0f481:hover {
@@ -1421,7 +1427,7 @@ div[aria-label="Preview Message"] {
     justify-items: right;
 }
 
-.cozyMessage__5126c.isSystemMessage_c19a55 .name__703b9.username__703b9.desaturateUserColors__41f68 {
+.cozyMessage__5126c.isSystemMessage_c19a55 .name__703b9 {
     font-size: 2.3rem;
     line-height: 1.25em;
     height: unset;
@@ -1495,11 +1501,12 @@ svg .mask__44b0c {
     border-radius: 0 !important;
 }
 
-.nameContainer__703b9 .name__703b9.username__703b9 {
+.nameContainer__703b9 .name__703b9 {
     font-family: barcodetext;
     font-size: 30px;
     height: 30px;
     text-transform: uppercase;
+    line-height: 30px;
 }
 
 .member__5d473.member_c8ffbb.container__91a9d .childContainer__91a9d {
