@@ -186,6 +186,14 @@ unnecessary
     100% { opacity: 0; transform: translateY(10px)}
 }
 
+@keyframes INCOHERENSPIN {
+    0% { transform: rotate(0deg) }
+    25% { transform: rotate(-140deg) }
+    50% { transform: rotate(0deg) }
+    85% { transform: rotate(140deg) }
+    100% { transform: rotate(360deg) }
+}
+
 /* actual shit go */
 
 :root { 
@@ -303,7 +311,7 @@ unnecessary
 /* bleach area */
 
 .item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b, .username__07f91, .statusText__5cda9,
-.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac {
+.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac, .container__13cf1, .container__91a9d {
     color: var(--bright-color);
     fill: var(--bright-color);
 }
@@ -345,6 +353,10 @@ unnecessary
     background-color: var(--neutral-color);
 }
 
+.addFriend__133bf:hover {
+    background-color: var(--neutral-color) !important;
+}
+
 .mediaMosaicAltTextPopoutTitle__0f481 {
     text-transform: uppercase;
 }
@@ -357,7 +369,7 @@ unnecessary
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81 {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
 }
@@ -487,17 +499,42 @@ if only discord were nicer...
 .itemCard__7e549.interactive_bf1984 {
     border-width: 1px;
     border-style: solid;
-    border-color: var(--friend-color);
+    border-color: var(--bright-color);
     border-radius: 0;
 }
 
 .wrapper__44b0c.headerAvatar__00943 {
     border-style: solid;
     border-width: 1px;
-    border-color: var(--friend-color);
+    border-color: var(--bright-color);
     width: 42px !important;
     height: 42px !important;
     overflow: visible;
+}
+
+.header__00943 div div.defaultColor__4bd52 {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: var(--bright-color);
+    padding-left: 20px;
+}
+
+.itemCard__7e549.interactive_bf1984:has(rect[mask="url(#svg-mask-status-online)"]),
+.wrapper__44b0c.headerAvatar__00943:has(rect[mask="url(#svg-mask-status-online)"]),
+.header__00943:has(rect[mask="url(#svg-mask-status-online)"]) div div.defaultColor__4bd52 {
+    border-color: var(--friend-color);
+}
+
+.itemCard__7e549.interactive_bf1984:has(rect[mask="url(#svg-mask-status-idle)"]),
+.wrapper__44b0c.headerAvatar__00943:has(rect[mask="url(#svg-mask-status-idle)"]),
+.header__00943:has(rect[mask="url(#svg-mask-status-idle)"]) div div.defaultColor__4bd52 {
+    border-color: var(--neutral-color);
+}
+
+.itemCard__7e549.interactive_bf1984:has(rect[mask="url(#svg-mask-status-dnd)"]),
+.wrapper__44b0c.headerAvatar__00943:has(rect[mask="url(#svg-mask-status-dnd)"]),
+.header__00943:has(rect[mask="url(#svg-mask-status-dnd)"]) div div.defaultColor__4bd52 {
+    border-color: var(--obesk-color);
 }
 
 .wrapper__44b0c.headerAvatar__00943 .avatarStack__44b0c {
@@ -519,16 +556,13 @@ if only discord were nicer...
     transform: translate(25px, -16px);
 }
 
-.headerFull__00943 div div.defaultColor__4bd52, .headerSimple__00943 div div.defaultColor__4bd52 {
-    border-style: solid;
-    border-bottom-width: 1px;
-    border-color: var(--friend-color);
-    padding-left: 20px;
-}
-
-.headerFull__00943 div div.textContent__00943:not(.defaultColor__4bd52), .headerSimple__00943 div div.textContent__00943:not(.defaultColor__4bd52) {
+.header__00943 div div.textContent__00943:not(.defaultColor__4bd52) {
     padding-left: 5px;
 }
+
+.itemCard__7e549:not(:has(.body__00943.inset_bf1984)) .header__00943 {
+    padding-bottom: 25px;
+}    
 
 
 .searchResult__80bf8 .avatar_c19a55, .messagesPopout__432f4 .messageGroupWrapper__432f4 .avatar_c19a55 {
@@ -634,10 +668,6 @@ foreignObject[mask="url(#«rkip»)"] {
     font-size: 32px;
     line-height: 32px;
     text-transform: uppercase;
-}
-
-.avatarDecorationContainer__44b0c {
-    display: none;
 }
 
 .channel__972a0.dm__972a0.container_e45859 {
@@ -993,7 +1023,7 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
 .buttonsInner__5126c.popover_f84418.wrapper_f7ecac, .buttonSection__1405b,
 .menu_c1e9c4, .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b,
 .hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
-.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d {
+.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d, .overlayButton__2f4f7 {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
@@ -1252,6 +1282,12 @@ div[aria-label="Preview Message"] {
     color: var(--corrutheme-chat-outline-color);
 }
 
+.cozyMessage__5126c .contents_c19a55 .avatarDecoration_c19a55 {
+    min-width: 68px;
+    min-height: 68px;
+    transform: translate(3.5px,-6px);
+}
+
 .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
     border-radius: 100%;
     min-width: 58px;
@@ -1300,10 +1336,6 @@ div[aria-label="Preview Message"] {
     z-index: -1;
     border-color: inherit;
 } */
-
-.avatarDecoration_c19a55 {
-    display: none;
-}
 
 
 @keyframes messagein {
@@ -1633,11 +1665,11 @@ article {
     align-items: center;
 }
 
-.input__0f084 {
+.input__0f084, .input_ac6cb0 {
     font-family: 'beech', 'spacemono' !important;
 }
 
-.input__0f084::placeholder {
+.input__0f084::placeholder, .input_ac6cb0::placeholder {
     color: transparent;
 }
 
@@ -1667,7 +1699,7 @@ article {
     color: transparent;
 }
 
-.search_c322aa {
+.search_c322aa, .searchBar_e6b769 .sm_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0, .input_ac6cb0 {
     z-index: 105;
     border: 0;
     text-align: center;
@@ -1679,9 +1711,64 @@ article {
     border-radius: 100px;
 }
 
-.search_c322aa:focus-within {
+.search_c322aa:focus-within, .input_ac6cb0:focus-within {
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/cneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
     box-shadow: 0px 0px 5px var(--friend-color);
+}
+
+.searchBar_e6b769 .sm_a22cb0.hasText_a22cb0 .lineClamp1__4bd52 {
+    font-family: 'beech', 'spacemono' !important;
+    text-transform: lowercase;
+}
+
+.container__8a0311:has(.quickswitcher_ac6cb0) {
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/corruripplegrayscale.gif");
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.container__8a031:has(.quickswitcher_ac6cb0):before, .container__8a0311:has(.quickswitcher_ac6cb0):after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/fwarpbig.gif");
+    background-size: 70%;
+    animation: INCOHERENSPIN 100s ease-in-out infinite;
+    pointer-events: none;
+    background-position: center;
+    background-color: transparent;
+}
+
+.container__8a0311:has(.quickswitcher_ac6cb0):before {
+    animation-direction: reverse;
+    animation-duration: 120s;
+    background-size: contain;
+}
+
+.quickswitcher_ac6cb0 {
+    overflow: hidden;
+}
+
+.quickswitcher_ac6cb0:before, .quickswitcher_ac6cb0:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/fwarp.gif");
+    animation: INCOHERENSPIN 30s cubic-bezier(.6,-0.8,.36,2.35) infinite;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+}
+
+.quickswitcher_ac6cb0:before {
+    animation-direction: reverse;
+    z-index: -1;
+    animation-duration: 20s;
 }
 
 .cozyMessage__5126c.isSystemMessage_c19a55 {

@@ -34,9 +34,14 @@
         padding-inline-end: 98px !important;
     }
     
-    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55 {
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55,
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatarDecoration_c19a55 {
         inset-inline-start: unset;
         inset-inline-end: var(--custom-message-margin-horizontal);
+    }
+    
+    li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatarDecoration_c19a55 {
+        transform: translate(0px,-6px);
     }
     
     li[data-is-self="true"] .groupStart__5126c::after { /* > jellee: do the pfp replacey thing */
