@@ -262,6 +262,8 @@ unnecessary
     --icon-muted: var(--bright-color) !important;
     --green-360: var(--friend-color);
     --green-300: var(--friend-color);
+    --green-new-31: var(--friend-color);
+    --green-new-37: var(--friend-color);
     --primary-660: var(--dark-color);
     --green-new-22: var(--friend-color);
     --yellow-300: var(--neutral-color);
@@ -303,7 +305,7 @@ unnecessary
 .disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a, .liveIndicator__30845,
 .mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60, .upload_aa605f, .media__41ea0, .attachmentContainer__299eb,
 .spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91,
-.vc-banners-everywhere-memberlist {
+.vc-banners-everywhere-memberlist, .inlineMediaEmbed__623de, .embedVideo__623de, .embedMedia__623de {
     border-radius: 0 !important;
 }
 
@@ -1029,7 +1031,8 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
 .buttonsInner__5126c.popover_f84418.wrapper_f7ecac, .buttonSection__1405b,
 .menu_c1e9c4, .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b,
 .hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
-.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d, .overlayButton__2f4f7 {
+.tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d, .overlayButton__2f4f7,
+.popover__2d0ab.popover__2d0ab {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
