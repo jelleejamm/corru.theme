@@ -30,6 +30,10 @@
         text-decoration: none;
     }
     
+    li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .messageContent_c19a55 a:not(.embedLink__623de) span::selection {
+        background: var(--dark-color) !important;
+    }
+
     li[data-is-self="true"] .repliedTextPreview_c19a55 a {
         color: var(--friend-color) !important;
     }
