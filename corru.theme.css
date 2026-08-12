@@ -23,36 +23,6 @@
 	image-rendering: -moz-crisp-edges;
 }
 
-/*
-unnecessary
-
-.vc-addon-card:has([title="moves your messages to the right! corru.theme (https:\/\/github.com\/jelleejamm\/corru.theme\/) and the themeattributes plugin are required"]){
-    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantbsteli.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-}
-
-.vc-addon-card:has([title="color your own messages! go to quickcss and change \"--corrutheme-chat-selfcolor\" to your own color. corru.theme (https:\/\/github.com\/jelleejamm\/corru.theme\/) and the themeattributes plugin are required"]){
-    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantbsteli.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-    
-.vc-addon-card:has([title="obeskis every message! corru.theme (https:\/\/github.com\/jelleejamm\/corru.theme\/) required"]){
-    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantbsteli.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-}
-}*/
-
 .vc-addon-card:has([title="become akizet! corru.theme (https:\/\/github.com\/jelleejamm\/corru.theme\/) and the themeattributes plugin are required"]){
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantakizet.png");
     background-repeat: no-repeat;
@@ -308,7 +278,8 @@ unnecessary
 .mention.wrapper_f61d60, .gameIcon__07f91, .wrapper_f61d60, .upload_aa605f, .media__41ea0, .attachmentContainer__299eb,
 .spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91,
 .vc-banners-everywhere-memberlist, .inlineMediaEmbed__623de, .embedVideo__623de, .embedMedia__623de, .button_c97e55, .inner_c0bea0,
-.notice__6e2b9, .container__8a031, .topPill_aa8da2 .item_aa8da2, .panel__5dec7, .checkboxIndicator__714a9 {
+.notice__6e2b9, .container__8a031, .topPill_aa8da2 .item_aa8da2, .panel__5dec7, .checkboxIndicator__714a9, .list__920b8, .guildIcon_edbb22,
+.newMosaicStyle_cf09d8 {
     border-radius: 0 !important;
 }
 
@@ -380,7 +351,7 @@ unnecessary
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81 {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8 {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
 }
@@ -403,6 +374,14 @@ if only discord were nicer...
     margin-left: 50px;
     padding: 15px;
 }*/
+
+.contents_c19a55 ul {
+   margin-left: 20px;
+}
+
+.contents_c19a55 ol {
+   margin-left: 54px;
+}
 
 .content_ab8609.unclamped_ab8609 {
     max-height: 500px !important;
@@ -435,34 +414,38 @@ if only discord were nicer...
     padding: 2px;
 }
 
-.newMessagesBar__0f481 {
+.newMessagesBar__0f481, .hamBanner__6a41e {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif") !important;
     background-color: unset;
     background-size: auto 25%;
     color: var(--dark-color);
     border-color: var(--bright-color);
     border-radius: 0;
+}
+
+.newMessagesBar__0f481 {
     height: 50px;
 }
 
-.newMessagesBar__0f481 .span__0f481, .newMessagesBar__0f481 .span__0f481 div div {
+.newMessagesBar__0f481 .span__0f481, .newMessagesBar__0f481 .span__0f481 div div, .hamBanner__6a41e .text-sm\/normal_cf4812 {
     font-family: barcodetext, monospace !important;
     font-weight: 100 !important;
-    text-shadow: 0px 0px var(--neutral-color);
+    text-shadow: 0px 0px var(--neutral-color) !important;
     font-size: 1.75rem;
     line-height: 1.25em;
     text-transform: lowercase;
+    color: var(--dark-color);
 }
 
 .newMessagesBar__0f481 .span__0f481 div {
     display: inline !important;
 }
 
-.newMessagesBar__0f481 .span__0f481:after {
+.newMessagesBar__0f481 .span__0f481:after, .hamBanner__6a41e .text-sm\/normal_cf4812:after {
     content: "'";
 }
 
-.newMessagesBar__0f481 .span__0f481:before {
+.newMessagesBar__0f481 .span__0f481:before, .hamBanner__6a41e .text-sm\/normal_cf4812:before {
     content: "NOTICE::'";
     text-transform: uppercase;
 }
@@ -610,7 +593,8 @@ if only discord were nicer...
     height: 58px;
 }
 
-.searchResult__80bf8 .markup__75297.messageContent_c19a55, .messagesPopout__432f4 .messageGroupWrapper__432f4 .markup__75297.messageContent_c19a55 {
+.searchResult__80bf8 .markup__75297.messageContent_c19a55, 
+.messagesPopout__432f4 .messageGroupWrapper__432f4:not(:has(.quote__122e4)) .markup__75297.messageContent_c19a55 {
     margin-left: 40px;
     color: var(--corrutheme-chat-outline-color-results);
 }
@@ -648,15 +632,31 @@ if only discord were nicer...
     color: var(--corrutheme-chat-outline-color-results);
 }
 
+/* move shit to right in search results/pins */
+
 .searchResult__80bf8 .nonVisualMediaItemContainer_f4758a, .searchResult__80bf8 .visualMediaItemContainer_f4758a,
 .searchResult__80bf8 .embed__623de, .searchResult__80bf8 .guildInviteContainer__083ae,
-.messagesPopout__432f4 .messageGroupWrapper__432f4 .nonVisualMediaItemContainer_f4758a,
-.messagesPopout__432f4 .messageGroupWrapper__432f4 .visualMediaItemContainer_f4758a, 
-.messagesPopout__432f4 .messageGroupWrapper__432f4 .embed__623de,
-.messagesPopout__432f4 .messageGroupWrapper__432f4 .guildInviteContainer__083ae {
+.messagesPopout__432f4 .messageGroupWrapper__432f4:not(:has(.quote__122e4)) .nonVisualMediaItemContainer_f4758a,
+.messagesPopout__432f4 .messageGroupWrapper__432f4:not(:has(.quote__122e4)) .visualMediaItemContainer_f4758a, 
+.messagesPopout__432f4 .messageGroupWrapper__432f4:not(:has(.quote__122e4)) .embed__623de,
+.messagesPopout__432f4 .messageGroupWrapper__432f4:not(:has(.quote__122e4)) .guildInviteContainer__083ae {
     width: 80%;
     margin-left: 60px;
 }
+
+.quote__122e4 {
+    background-color: var(--bright-color);
+}
+
+.wrapper_f61d60 {
+    background-color: var(--friend-color);
+    color: var(--dark-color);
+}
+
+.messagesPopout__432f4 .messageGroupWrapper__432f4 .quote__122e4 {
+    margin-left: 60px;
+}
+
 
 /* originally i wanted pfps to be square on the user/dms list but they turned out a bit jank so i disabled them
 you can reenable them if you wish
@@ -739,17 +739,18 @@ code.inline {
 }
 
 .markup__75297.messageContent_c19a55 .scrollbarGhostHairline__506b3.scrollbar__506b3.hljs {
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif");
+    background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/spotgradientinversewhite.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ozospiral_text.png"), white;
     color: var(--dark-color);
-    border-color: var(--bright-color);
+    letter-spacing: 0.2em;
+    background-position: center left;
+    background-size: cover, cover;
+    box-shadow: 0px 0px 5px var(--neutral-color);
     border-radius: 0;
-    font-family: barcodetext, monospace;
-    font-size: 2.3rem;
-    text-shadow: 0px 0px var(--neutral-color);
-    line-height: 1.25em;
-    background-size: auto 100%;
+    border-color: var(--neutral-color);
+    text-shadow: 2px 2px var(--neutral-color);
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
+    text-align: left;
 }
 
 .divider__5126c.beforeGroup__5126c.divider__908e2.isUnread__908e2 {
@@ -884,6 +885,23 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     padding-left: 3px;
     padding-right: 2px;
 }
+
+/* jesus christ 
+ADDME once discord lets me fucking refresh themes holy shit dude
+
+.menuItemIcon_ce8328 svg path[d="M18.46 20.9a12.65 12.65 0 0 1-1.46.9 10.95 10.95 0 0 1-10 0 11 11 0 1 1 11.46-.9Zm-1.65-1.3a8.96 8.96 0 0 1-9.62 0l.23-2.26c.02-.25-.27-.36-.41-.15-.29.45-.6 1.01-.88 1.63A9.04 9.04 0 0 1 4.2 16.5a9 9 0 0 1 15.6 0 9.04 9.04 0 0 1-1.93 2.32c-.27-.62-.59-1.18-.88-1.63-.14-.21-.43-.1-.4.15l.22 2.27ZM12 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"] {
+    visibility: hidden;
+}
+
+.menuItemIcon_ce8328:before svg path[d="M18.46 20.9a12.65 12.65 0 0 1-1.46.9 10.95 10.95 0 0 1-10 0 11 11 0 1 1 11.46-.9Zm-1.65-1.3a8.96 8.96 0 0 1-9.62 0l.23-2.26c.02-.25-.27-.36-.41-.15-.29.45-.6 1.01-.88 1.63A9.04 9.04 0 0 1 4.2 16.5a9 9 0 0 1 15.6 0 9.04 9.04 0 0 1-1.93 2.32c-.27-.62-.59-1.18-.88-1.63-.14-.21-.43-.1-.4.15l.22 2.27ZM12 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"] {
+    content: "\e907 ";
+    font-family: 'corruicons';
+    color: var(--bright-color);
+    visibility: visible;
+    padding-left: 3px;
+    padding-right: 2px;
+}
+*/
 
 .headerContainer__122e4 svg path {
     color: var(--bright-color);
@@ -1063,7 +1081,8 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
 .menu_c1e9c4, .popover_c97e55, .tooltipPrimary_c36707, .tooltip__4e35b,
 .hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
 .tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d, .overlayButton__2f4f7,
-.popover__2d0ab.popover__2d0ab, .popover_c97e55.popover_c97e55, .controlsRow__07fe9 .button_a22cb0 {
+.popover__2d0ab.popover__2d0ab, .popover_c97e55.popover_c97e55, .controlsRow__07fe9 .button_a22cb0,
+.contentWrapper__08434 {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
@@ -1272,7 +1291,7 @@ div[aria-label="Preview Message"] {
     box-shadow: -5px 0px 5px var(--friend-color);
 }
 
-.button_a22cb0.sm_a22cb0.active_a22cb0 {
+.button_a22cb0.sm_a22cb0.active_a22cb0, .button_a22cb0.critical-primary_a22cb0 {
     border-radius: 0;
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     align-items: center;
@@ -1530,11 +1549,25 @@ div[aria-label="Preview Message"] {
 
 .container_b7e1cb, .contents_c19a55 {
     background: var(--dark-color) !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--corrutheme-chat-outline-color) !important;
+    border-radius: 0 !important;
+    padding: 10px;
+}
+
+.content__122e4 {
+    background: var(--dark-color) !important;
     border-width: 1px !important;
     border-style: solid;
     border-color: var(--corrutheme-chat-outline-color) !important;
     border-radius: 0 !important;
     padding: 10px;
+}
+
+.content__122e4 .container_b7e1cb {
+    border-width: 0;
+    border-style: none;
 }
 
 .avatarStack__44b0c, .avatarDecorationContainer__44b0c {
@@ -1719,11 +1752,11 @@ article {
     align-items: center;
 }
 
-.input__0f084, .input_ac6cb0 {
+.input__0f084, .input_ac6cb0, .input__75098 {
     font-family: 'beech', 'spacemono' !important;
 }
 
-.input__0f084::placeholder, .input_ac6cb0::placeholder, .editor__25bec div span span span {
+.input__0f084::placeholder, .input_ac6cb0::placeholder, .editor__25bec div span span span[data-slate-placeholder="true"] {
     color: transparent !important;
 }
 
@@ -1735,7 +1768,7 @@ article {
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/mneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
     background-color: var(--dark-color);
     box-shadow: 0px 0px 5px var(--obesk-color);
-    color: var(--friend-color);
+    color: var(--friend-color) !important;
     border-radius: 100px;
 }
 
@@ -1744,16 +1777,16 @@ article {
     box-shadow: 0px 0px 5px var(--friend-color);
 }
 
-.DraftEditor-editorContainer div[data-contents="true"] span[data-text="true"] {
+.DraftEditor-editorContainer div[data-contents="true"] span[data-text="true"], .editor__25bec div span span span[data-slate-string="true"] {
     font-family: 'beech', 'spacemono' !important;
     color: var(--friend-color);
 }
 
-.public-DraftEditorPlaceholder-inner {
+.public-DraftEditorPlaceholder-inner, .input__75098::placeholder {
     color: transparent;
 }
 
-.search_c322aa, .searchBar_e6b769 .sm_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0, .input_ac6cb0 {
+.search_c322aa, .searchBar_e6b769 .sm_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0, .input_ac6cb0, .container__75098 {
     z-index: 105;
     border: 0;
     text-align: center;
@@ -1765,7 +1798,7 @@ article {
     border-radius: 100px;
 }
 
-.search_c322aa:focus-within, .input_ac6cb0:focus-within {
+.search_c322aa:focus-within, .input_ac6cb0:focus-within, .container__75098:focus-within {
     background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/cneural.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif");
     box-shadow: 0px 0px 5px var(--friend-color);
 }

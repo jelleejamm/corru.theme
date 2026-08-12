@@ -82,9 +82,9 @@
         justify-content: right;
     }
     
-    li[data-is-self="true"] .repliedMessageClickableSpine_c19a55 { /*todo fix this*/
+    li[data-is-self="true"] .repliedMessageClickableSpine_c19a55 {
         transform: scaleX(-1);
         inset-inline-start: calc(-76px);
-        inset-inline-end: var(--custom-message-margin-horizontal);
-        left: calc(100% + var(--custom-message-margin-horizontal) - 100px);
+        inset-inline-end: calc(var(--custom-message-margin-horizontal) - 55px);
+        left: calc(100% + var(--custom-message-margin-horizontal) - 10px);
     }
