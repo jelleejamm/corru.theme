@@ -380,7 +380,7 @@ if only discord were nicer...
 }
 
 .contents_c19a55 ol {
-   margin-left: 54px;
+   margin-left: calc(14px + var(--totalCharacters) * 13px);
 }
 
 .content_ab8609.unclamped_ab8609 {
