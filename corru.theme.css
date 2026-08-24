@@ -279,7 +279,7 @@
 .spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91,
 .vc-banners-everywhere-memberlist, .inlineMediaEmbed__623de, .embedVideo__623de, .embedMedia__623de, .button_c97e55, .inner_c0bea0,
 .notice__6e2b9, .container__8a031, .topPill_aa8da2 .item_aa8da2, .panel__5dec7, .checkboxIndicator__714a9, .list__920b8, .guildIcon_edbb22,
-.newMosaicStyle_cf09d8 {
+.newMosaicStyle_cf09d8, .mediaBar__2d263, .messageGroupWrapper__432f4, .profileHeaderBannerContainer__9c3be, .editingPanel__9c3be {
     border-radius: 0 !important;
 }
 
@@ -288,7 +288,7 @@
 /* bleach area */
 
 .item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b, .username__07f91, .statusText__5cda9,
-.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac, .container__13cf1, .container__91a9d {
+.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac, .container__13cf1, .container__91a9d, .reactionCount__23977 {
     color: var(--bright-color);
     fill: var(--bright-color);
 }
@@ -326,6 +326,17 @@
     padding-bottom: 1px;
 }
 
+
+.editingPanelExpanded__9c3be .profileContentOuter__9c3be {
+    border-inline-end-color: var(--neutral-color);
+}
+
+.editingPanel__9c3be {
+    border-color: var(--neutral-color);
+    border-inline-end-color: transparent;
+    border-right-width: 0;
+}
+
 .altTag__41ea0, .mediaMosaicAltText__0f481, .mediaMosaicAltText__0f481:focus, .mediaMosaicAltText__0f481:hover {
     background-color: var(--friend-color);
     mix-blend-mode: normal !important;
@@ -358,6 +369,19 @@
 
 .upload_aa605f {
     border-color: var(--bright-color);
+}
+
+.messageGroupWrapper__432f4, .searchResult__80bf8 {
+    background-color: transparent; border-color: transparent;
+}
+
+.message__80bf8 {
+    padding: 0;
+}
+
+.messagesPopout__432f4 .messageGroupWrapper__432f4 .messageGroupCozy__432f4 {
+    padding-bottom: unset;
+    padding-top: unset;
 }
 
 /*
@@ -577,8 +601,7 @@ if only discord were nicer...
     border-width: 1px;
     border-style: solid;
     border-color: var(--corrutheme-chat-outline-color-results);
-    margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 14px;
     width: 50px;
     height: 50px;
 }
@@ -587,8 +610,7 @@ if only discord were nicer...
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
-    margin-top: 16px;
-    margin-left: 15px;
+    margin-left: 14px;
     width: 58px;
     height: 58px;
 }
@@ -1369,6 +1391,7 @@ div[aria-label="Preview Message"] {
     border-style: double;
     border-width: 5px;
     transform: translateY(-10px);
+    background-color: black;
 }
 
 
