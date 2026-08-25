@@ -710,7 +710,7 @@ foreignObject[mask="url(#«rkip»)"] {
     filter: hue-rotate(-60deg);
 }
 
-.showEffect_dfb989.container_dfb989 {
+.innerContainer_dfb989, .innerContainer_dfb989::before {
     font-family: barcodetext;
     font-size: 32px;
     line-height: 32px;
@@ -718,12 +718,11 @@ foreignObject[mask="url(#«rkip»)"] {
     font-weight: 100 !important;
 }
 
-.innerContainer_dfb989, .innerContainer_dfb989::before, .innerContainer_dfb989:hover {
-    font-weight: 100 !important;
-    font-family: barcodetext;
-    font-size: 32px;
-    line-height: 32px;
-    text-transform: uppercase;
+.usernameText_c19a55 .innerContainer_dfb989  {
+    font-family: "spacemono", monospace;
+    font-size: unset;
+    line-height: unset;
+    text-transform: unset;
 }
 
 .channel__972a0.dm__972a0.container_e45859 {
@@ -1255,10 +1254,12 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 
 .displayName__26b1f::before {
     content: "!!__";
+    font-family: barcodetext;
 }
 
 .displayName__26b1f::after {
     content: "__!!";
+    font-family: barcodetext;
 }
 
 .channelTextArea_f75fb0, .buttonWrapper__24af7, .emojiButton__04eed.emojiButton__74017.button__74017, .button_e6e74f {
