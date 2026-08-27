@@ -856,18 +856,6 @@ i wanted to add the ingame animation it has here but it looks like shit, readd i
     display: none;
 }
 
-.buttons__37e49 .contents__201d5 .lottieIcon__5eb9b:after {
-    content: "\e90b ";
-    font-family: 'corruicons';
-    color: var(--bright-color);
-    visibility: visible;
-    margin-top: 10px;
-}
-
-.audioButtonParent__5e764 .plated__67645 .contents__201d5 .lottieIcon__5eb9b:after {
-    content: none !important;
-}
-
 .title_edbb22 svg {
     display: none;
 }
