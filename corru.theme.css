@@ -363,7 +363,7 @@
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8, .container_a8e786 {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8, .container_a8e786, .channelTextArea__5126c.channelTextArea__74017 {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
 }
@@ -760,9 +760,9 @@ code.inline {
     background-position: center !important;
 }
 
-.markup__75297.messageContent_c19a55 .scrollbarGhostHairline__506b3.scrollbar__506b3.hljs {
+.codeContainer__75297 {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/spotgradientinversewhite.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ozospiral_text.png"), white;
-    color: var(--dark-color);
+    color: var(--dark-color) !important;
     letter-spacing: 0.2em;
     background-position: center left;
     background-size: cover, cover;
@@ -773,6 +773,10 @@ code.inline {
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
     text-align: left;
+}
+
+.hljs {
+	color: var(--dark-color) !important;
 }
 
 .divider__5126c.beforeGroup__5126c.divider__908e2.isUnread__908e2 {
@@ -795,6 +799,7 @@ code.inline {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: normal;
+    padding-left: 15px; padding-right: 15px; /* spacing looks weird when it's denoted as new messages from a new day, this should prolly fix it */
 }
 
 .unreadPillCap__908e2 {
