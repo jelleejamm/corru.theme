@@ -279,7 +279,8 @@
 .spoilerWarning__299eb, .altTag__41ea0, .mediaMosaicAltText__0f481, .button__201d5, .attachedCaret_f1ceac, .content__07f91,
 .vc-banners-everywhere-memberlist, .inlineMediaEmbed__623de, .embedVideo__623de, .embedMedia__623de, .button_c97e55, .inner_c0bea0,
 .notice__6e2b9, .container__8a031, .topPill_aa8da2 .item_aa8da2, .panel__5dec7, .checkboxIndicator__714a9, .list__920b8, .guildIcon_edbb22,
-.newMosaicStyle_cf09d8, .mediaBar__2d263, .messageGroupWrapper__432f4, .profileHeaderBannerContainer__9c3be, .editingPanel__9c3be {
+.newMosaicStyle_cf09d8, .mediaBar__2d263, .messageGroupWrapper__432f4, .profileHeaderBannerContainer__9c3be, .editingPanel__9c3be,
+.rippleContainer_a8e786, .container_a8e786 {
     border-radius: 0 !important;
 }
 
@@ -362,7 +363,7 @@
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8 {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8, .container_a8e786 {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
 }
@@ -835,25 +836,6 @@ code.inline {
 .quote__122e4, 
 .scrollableContainer__74017 {
     border-radius: 0 !important;
-}
-
-.audioButtonParent__5e764 .plated__67645 .contents__201d5 .lottieIcon__5eb9b svg {
-    display: initial !important;
-}
-
-/*
-.buttons__37e49 .lottieIcon__5eb9b {
-    transition: transform 1s cubic-bezier(.33,.63,.14,.99);
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-}
-i wanted to add the ingame animation it has here but it looks like shit, readd it if you wish
-.buttons__37e49 .lottieIcon__5eb9b:hover {
-    transform: rotateY(-360deg);
-}*/
-
-.buttons__37e49 .plated__67645 .contents__201d5 .lottieIcon__5eb9b svg {
-    display: none;
 }
 
 .title_edbb22 svg {
