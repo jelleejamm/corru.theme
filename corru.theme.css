@@ -6,28 +6,28 @@
  */
 
 .vc-addon-card:has([title="theme based on corru.observer https:\/\/corru.observer"]){
-    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantbsteli.png");
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantbsteli.png") !important;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
 }
 
 .vc-addon-card:has([title="make your messages look like the interloper's! corru.theme (https:\/\/github.com\/jelleejamm\/corru.theme\/) and the themeattributes plugin are required"]){
-    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantloper.png");
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantloper.png") !important;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
 }
 
 .vc-addon-card:has([title="become akizet! corru.theme (https:\/\/github.com\/jelleejamm\/corru.theme\/) and the themeattributes plugin are required"]){
-    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantakizet.png");
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/observantakizet.png") !important;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
 }
@@ -138,9 +138,24 @@
 
 /* FUCKINNNN ANIMS */
 
+@keyframes BUDDYBOUNCE-Y {
+    0% { transform: translateY(5%) rotateY(20deg)}
+    100% { transform: translateY(-5%) rotateY(-20deg)}
+}
+
+@keyframes BUDDYBOUNCE-X {
+    0% { transform: translateX(5%) rotate(5deg) }
+    100% { transform: translateX(-5%) rotate(-5deg) }
+}
+
 @keyframes SPIN {
     0% { transform: rotate(0deg) }
     100% { transform: rotate(360deg) }
+}
+
+@keyframes SPIN-Y {
+    0% { transform: var(--baseTransform) rotateY(0deg) }
+    100% { transform: var(--baseTransform) rotateY(360deg) }
 }
 
 @keyframes portrait-wiggle {
@@ -204,6 +219,8 @@
     --opacity-blurple-60: var(--friend-color) !important;
     --blurple-50: var(--friend-color) !important;
     --blurple-59: var(--friend-color) !important;
+    --blue-new-21: var(--friend-color) !important;
+    --blurple-60: var(--obesk-color) !important;
     --blurple-54: var(--dark-color) !important;
     --opacity-8-hsl: var(--obesk-color) !important;
     --mention-background: var(--friend-color);
@@ -229,6 +246,7 @@
     --neutral-91: var(--dark-color) !important;
     --neutral-92: var(--dark-color) !important;
     --neutral-95: var(--dark-color) !important;
+    --yellow-new-38: var(--neutral-color) !important;
     --plum-20: var(--dark-color) !important;
     --icon-muted: var(--bright-color) !important;
     --green-360: var(--friend-color);
@@ -280,7 +298,8 @@
 .vc-banners-everywhere-memberlist, .inlineMediaEmbed__623de, .embedVideo__623de, .embedMedia__623de, .button_c97e55, .inner_c0bea0,
 .notice__6e2b9, .container__8a031, .topPill_aa8da2 .item_aa8da2, .panel__5dec7, .checkboxIndicator__714a9, .list__920b8, .guildIcon_edbb22,
 .newMosaicStyle_cf09d8, .mediaBar__2d263, .messageGroupWrapper__432f4, .profileHeaderBannerContainer__9c3be, .editingPanel__9c3be,
-.rippleContainer_a8e786, .container_a8e786 {
+.rippleContainer_a8e786, .container_a8e786, .mediaBarInteraction_b26b79.mediaBarInteractionVolume_b26b79,
+.modalContent_e44912 .navScroller__409aa .itemContainer_caf372, .modalContent_e44912 .navScroller__409aa .item_caf372, .vc-notice-container {
     border-radius: 0 !important;
 }
 
@@ -308,6 +327,11 @@
     fill: var(--dark-color);
 }
 
+.vc-btn-primary {
+    color: var(--dark-color) !important;
+    fill: var(--dark-color);
+}
+
 /* blue area */
 
 .usernameSpeaking__07f91 {
@@ -327,6 +351,79 @@
     padding-bottom: 1px;
 }
 
+.modalContent_e44912 .navScroller__409aa .itemContainer_caf372 {
+    font-family: barcodetext !important;
+    text-transform: uppercase;
+    font-weight: 100 !important;
+    color: var(--neutral-color);
+    font-size: 32px;
+    line-height: 32px;
+    border: 1px solid var(--neutral-color);
+}
+
+.modalContent_e44912 .navScroller__409aa .itemContainer_caf372:has(.item_caf372.destructive_caf372) {
+    border-color: var(--obesk-color);
+}
+
+.modalContent_e44912 .navScroller__409aa .item_caf372.destructive_caf372:hover,
+.modalContent_e44912 .navScroller__409aa .item_caf372.destructive_caf372:hover .text-md\/medium_cf4812,
+.modalContent_e44912 .navScroller__409aa .item_caf372.destructive_caf372:hover .icon_caf372 path {
+    color: var(--dark-color) !important;
+    background-color: var(--obesk-color) !important;
+    fill: var(--dark-color) !important;
+}
+
+.sectionLabel__409aa .label__409aa {
+    color: var(--neutral-color) !important;
+}
+
+.modalContent_e44912 .navScroller__409aa .itemContainer_caf372:not(:has(.active_caf372)):hover, .modalContent_e44912 .navScroller__409aa .itemContainer_caf372:not(:has(.active_caf372)):hover .item_caf372 {
+    color: var(--dark-color);
+    background-color: var(--neutral-color);
+}
+
+.modalContent_e44912 .navScroller__409aa .itemContainer_caf372:has(.active_caf372) {
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/panelpatterntranflip.gif");
+    background-color: var(--neutral-color);
+    background-position: 50% 50%;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+}
+
+.modalContent_e44912 .navScroller__409aa .item_caf372 {
+    color: var(--neutral-color);
+}
+
+.modalContent_e44912 .navScroller__409aa .item_e4d939 {
+    border: 1px solid var(--neutral-color);
+    color: var(--neutral-color);
+    background-color: var(--dark-color);
+    font-size: 25px;
+    line-height: 25px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.modalContent_e44912 .navScroller__409aa .item_caf372.active_caf372 {
+    background-color: transparent;
+}
+
+.modalContent_e44912 .navScroller__409aa .item_caf372.active_caf372:hover {
+    text-decoration: underline;
+}
+
+.modalContent_e44912 .navScroller__409aa .thumb_e4d939 {
+    background-color: var(--dark-color);
+}
+
+.modalContent_e44912 .navScroller__409aa .item_caf372 .text-md\/medium_cf4812 {
+    font-family: barcodetext !important;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: 100 !important;
+    color: var(--neutral-color);
+}
 
 .editingPanelExpanded__9c3be .profileContentOuter__9c3be {
     border-inline-end-color: var(--neutral-color);
@@ -363,9 +460,16 @@
     color: var(--corrutheme-chat-outline-color);
 }
 
-.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8, .container_a8e786, .channelTextArea__5126c.channelTextArea__74017 {
+.embedFull__623de, .wrapperAudio_cf09d8, .file__0ccae, .container_e131a9, .upload_aa605f, .root__4ad81, .list__920b8, 
+.container_a8e786, .channelTextArea__5126c.channelTextArea__74017 .scrollableContainer__74017.themedBackground__74017,
+.vc-addon-card {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
+}
+
+.channelTextArea__5126c.channelTextArea__74017, .operations_bab751 {
+	margin-left: 15px;
+	width: calc(100% - 22px);
 }
 
 .upload_aa605f {
@@ -1078,10 +1182,14 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 .hoverButtonGroup__06ab4, .audioControls_cf09d8, .favButton__2dc39, .gifFavoriteButton__43deb,
 .tooltip_fa450d, .wrapper_f7ecac, .mediaMosaicAltTextPopout__0f481, .actionRow__6981d, .overlayButton__2f4f7,
 .popover__2d0ab.popover__2d0ab, .popover_c97e55.popover_c97e55, .controlsRow__07fe9 .button_a22cb0,
-.contentWrapper__08434 {
+.contentWrapper__08434, .tabButton_b08638.editingPanelExpandButtonDefault__9c3be, .vc-addon-card {
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
+}
+
+.tabButton_b08638.editingPanelExpandButtonDefault__9c3be {
+    padding-left: 5px;
 }
 
 .banner__68edb::before {
@@ -1262,7 +1370,7 @@ div[aria-label="Preview Message"] {
 .button_a22cb0.primary_a22cb0,
 .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0):not(.md_a22cb0),
 .button__201d5.grow__201d5.lookFilled__201d5,
-.newMessagesBar__0f481 .barButtonAlt__0f481 {
+.newMessagesBar__0f481 .barButtonAlt__0f481, .vc-btn-secondary {
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     align-items: center;
     justify-content: center;
@@ -1275,7 +1383,8 @@ div[aria-label="Preview Message"] {
     border-bottom-color: var(--neutral-color) !important;
 }
 
-.button_a22cb0.md_a22cb0.secondary_a22cb0.hasText_a22cb0, .watchStreamRow__43481 .button_a22cb0 {
+.button_a22cb0.md_a22cb0.secondary_a22cb0.hasText_a22cb0, .watchStreamRow__43481 .button_a22cb0, 
+.vc-btn-primary, .vc-btn-positive, .vc-settings-quickActions-pill {
     border-radius: 0;
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     align-items: center;
@@ -1285,11 +1394,11 @@ div[aria-label="Preview Message"] {
     color: var(--dark-color) !important;
     border: 0.32rem double !important;
     border-top-left-radius: 20px;
-    border-left-color: var(--friend-color);
-    box-shadow: -5px 0px 5px var(--friend-color);
+    border-left-color: var(--friend-color) !important;
+    box-shadow: -5px 0px 5px var(--friend-color) !important;
 }
 
-.button_a22cb0.sm_a22cb0.active_a22cb0, .button_a22cb0.critical-primary_a22cb0 {
+.button_a22cb0.sm_a22cb0.active_a22cb0, .button_a22cb0.critical-primary_a22cb0, .button_a22cb0.critical-secondary_a22cb0 {
     border-radius: 0;
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     align-items: center;
@@ -1302,6 +1411,38 @@ div[aria-label="Preview Message"] {
     border-right-color: var(--obesk-color) !important;
 }
 
+.vc-settings-tab .vc-special-card.vc-special-card-special {
+    background-color: var(--fundfriend-color) !important;
+}
+
+.vc-donate-support-button path {
+    fill: var(--fundfriend-color) !important;
+}
+
+.vc-invite-support-button, .vc-donate-support-button  {
+    border-radius: 0;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: var(--bright-color) !important;
+    color: var(--dark-color) !important;
+    border: 0.32rem double !important;
+    border-radius: 20px;
+    border-top-color: var(--fundfriend-color) !important;
+}
+
+.vc-settings-tab .vc-special-card-special .vc-special-image-container {
+    animation: BUDDYBOUNCE-Y 1s ease-in-out infinite alternate;
+}
+
+.vc-settings-tab .vc-special-card-special .vc-special-image-container .vc-special-image {
+    content: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/funfriend.gif");
+    width: 100px;
+    height: 100px;
+    animation: BUDDYBOUNCE-X 2s ease-in-out infinite alternate;
+}
+
 .button__201d5.grow__201d5.lookFilled__201d5 {
     padding-bottom: calc(0.16rem + 12.5px);
     padding-top: calc(0.16rem + 12.5px);
@@ -1312,7 +1453,8 @@ div[aria-label="Preview Message"] {
 .button_a22cb0.secondary_a22cb0:not(.fullWidth_a22cb0):not(.md_a22cb0):hover,
 .button__201d5.grow__201d5.lookFilled__201d5:hover,
 .newMessagesBar__0f481 .barButtonAlt__0f481:hover,
-.button_a22cb0.sm_a22cb0.active_a22cb0:hover {
+.button_a22cb0.sm_a22cb0.active_a22cb0:hover, .button_a22cb0.critical-primary_a22cb0:hover, .button_a22cb0.critical-secondary_a22cb0:hover,
+.vc-btn-base:hover {
     transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     transform: translateY(-0.32rem);
 }
@@ -1368,6 +1510,41 @@ div[aria-label="Preview Message"] {
     border-width: 5px;
     transform: translateY(-10px);
     background-color: black;
+}
+
+.embedDescription__623de div .contents_c19a55 .avatar_c19a55 { 
+    border-style: none !important;
+    min-width: 40px;
+    min-height: 40px;
+    transform: translateX(16px);
+}
+
+.embedDescription__623de div .contents_c19a55 .avatarDecoration_c19a55 { 
+    border-style: none !important;
+    min-width: 30px;
+    min-height: 30px;
+    transform: translateX(16px);
+}
+
+.embedDescription__623de div .contents_c19a55 .header_c19a55 {
+    padding-left: 60px;
+    margin-top: 8px;
+}
+
+.tooltipContent_c36707 .contents_c19a55 .avatar_c19a55 {
+    width: 35px;
+    height: 35px;
+    transform: translate(13px, -6px);
+}
+
+.tooltipContent_c36707 .contents_c19a55 .avatarDecoration_c19a55 {
+    width: 44px;
+    height: 44px;
+    transform: translate(12.5px, -6px);
+}
+
+.tooltipContent_c36707 .contents_c19a55 .header_c19a55 {
+    padding-left: 47px;
 }
 
 
