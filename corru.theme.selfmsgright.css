@@ -40,6 +40,20 @@
         inset-inline-end: var(--custom-message-margin-horizontal);
     }
     
+    li[data-is-self="true"] .container__122e4 {
+        flex-direction: row-reverse;
+        width: auto;
+    }
+    
+    li[data-is-self="true"] .quote__122e4 {
+        margin-inline-end: unset;
+        margin-inline-start: 12px;
+    }
+    
+    li[data-is-self="true"] .headerContainer__122e4 {
+        align-self: flex-end;
+    }
+    
     li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatarDecoration_c19a55 {
         transform: translate(0px,-6px);
     }

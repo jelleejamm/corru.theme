@@ -121,6 +121,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'ruined';
     src: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/fnt/RuinedSerifIta.woff2") format('woff2'),
@@ -129,6 +130,17 @@
     font-style: italic;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'sharetech';
+    src: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/fnt/ShareTechMono-Regular.woff2') format('woff2'),
+        url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/fnt/ShareTechMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 .ruined-text {
     font-family: ruined;
     text-transform: uppercase;
@@ -189,6 +201,7 @@
     --neutral-color: #ffff00;
     --bastard-color: #ff0066;
     --fundfriend-color: #00ff66;
+    --dread-color: #6D0000;
 
     --bigFont: 20px;
     --regularFont: 16px;
@@ -221,6 +234,7 @@
     --blurple-59: var(--friend-color) !important;
     --blue-new-21: var(--friend-color) !important;
     --blue-new-37: var(--friend-color) !important;
+    --blue-new-53: var(--friend-color) !important;
     --blurple-60: var(--obesk-color) !important;
     --blurple-54: var(--dark-color) !important;
     --blurple-36: var(--friend-color) !important;
@@ -233,7 +247,7 @@
     --red-new-18: var(--obesk-color) !important;
     --pink-34: var(--obesk-color) !important;
     --reaction-text-default: var(--bright-color);
-    --custom-bg-surface-overlay: rgba(0, 0, 0, .8);
+    --custom-bg-surface-overlay: rgb(from var(--dark-color-swappa) r g b / 0.8);
     --primary-500: var(--dark-color) !important;
     --neutral-83: var(--dark-color) !important;
     --neutral-60: var(--dark-color) !important;
@@ -268,7 +282,8 @@
     --neutral-35: var(--bright-color);
     --neutral-29: var(--bright-color);
     --neutral-37: var(--bright-color);
-    --opacity-red-12: rgb(255,0,255,0.12);
+    --opacity-red-12: rgb(from var(--obesk-color) r g b / 0.12);
+    
     --opacity-red-mysteryoneicantfind: rgb(255,0,255,0.16);
     
     --corrutheme-chat-outline-color: var(--bright-color);
@@ -281,7 +296,7 @@
 }
 
 *::selection {
-    background: var(--obesk-color);
+    background: rgb(from var(--neutral-color) r g b / 0.20);
 }
 
 .blobContainer_e5445c .svg_cc5dd2 foreignObject, 
@@ -301,7 +316,7 @@
 .container_e131a9, .panels__5e434, .result__2dc39, .result__2dc39::after, .gif__2dc39, .contentWrapper__08434,
 .categoryFade_d02962, .categoryFadeBlurple_d02962, .childContainer__91a9d, .imageContent__0f481, .loadingOverlay_af017a img,
 .border__2f4f7, .tile__2f4f7.tile__90dc5, .experimentOverlayTitle__2f4f7, 
-.upperBadge_cc5dd2 .eyebrow_cf4812, .lowerBadge_cc5dd2 .eyebrow_cf4812,
+.upperBadge_cc5dd2 .eyebrow_cf4812, .lowerBadge_cc5dd2 .eyebrow_cf4812, .iconBadge__650eb, .iconBadge__463b7, .numberBadge__463b7,
 .listItem__650eb, .container__37e49, .wrapper__44b0c.headerAvatar__00943, .addFriend__133bf, .wrapperMediaMosaic_cf09d8, .video_cf09d8,
 .wrapperAudio_cf09d8, .fakeEdges_b26b79:before, .fakeEdges_b26b79:after, .unreadMentionsBar_ef3116, .eyebrow_cf4812,
 .disconnect_f1ceac, .buttonSection__1405b, .file__0ccae, .borderRadius__6341f, .pictureInPictureVideo_e4cb9a, .liveIndicator__30845,
@@ -321,8 +336,8 @@
 
 .item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b, .username__07f91, .statusText__5cda9,
 .channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac, .container__13cf1, .container__91a9d, .reactionCount__23977 {
-    color: var(--bright-color);
-    fill: var(--bright-color);
+    color: var(--bright-color-swappa);
+    fill: var(--bright-color-swappa);
 }
 
 /* yellow area */
@@ -389,6 +404,10 @@
     background-color: var(--neutral-color) !important;
 }
 
+.theme-light .container_c8ffbb, .theme-light .members_c8ffbb {
+    background-color: var(--dark-color-swappa);
+}
+
 /*********
     LIGHT MODE END 
 **********/
@@ -396,6 +415,15 @@
 .box__376cb .singleMessage__376cb .contents_c19a55, .box__376cb .singleMessage__376cb .container_b7e1cb {
     margin-left: 50px;
 }*/
+
+.viewFullBio_f5f93a .textButton__7a01b  {
+    color: var(--bright-color);
+}
+
+u, .underline_ada32f {
+    text-decoration-style: dashed;
+}
+
 
 .modalContent_e44912 .navScroller__409aa .itemContainer_caf372 {
     font-family: barcodetext !important;
@@ -559,11 +587,11 @@ if only discord were nicer...
    margin-left: calc(14px + var(--totalCharacters) * 13px);
 }
 
-.content_ab8609.unclamped_ab8609 {
+.content_ab8609.unclamped_ab8609, .compactExpanded_ab8609 {
     max-height: 500px !important;
 }
 
-.content_ab8609, .content_ab8609.unclamped_ab8609 {
+.content_ab8609, .content_ab8609.unclamped_ab8609, .compactExpanded_ab8609 {
     transition: max-height 1s;
 }
 
@@ -580,7 +608,7 @@ if only discord were nicer...
     justify-content: center;
 }
 
-.upperBadge_cc5dd2 .eyebrow_cf4812, .lowerBadge_cc5dd2 .eyebrow_cf4812 {
+.iconBadge__463b7, .numberBadge__463b7 {
     border-color: var(--dark-color);
     border-width: 2px;
     border-style: solid;
@@ -1001,7 +1029,7 @@ code.inline {
 .title_edbb22:has(svg):before {
     content: "\e908 ";
     font-family: 'corruicons';
-    color: var(--bright-color);
+    color: var(--bright-color-swappa);
     visibility: visible;
     padding-left: 3px;
     padding-right: 2px;
@@ -1014,7 +1042,7 @@ code.inline {
 .friendsButtonContainer_e6b769 .avatar__20a53:after {
     content: "\e906 ";
     font-family: 'corruicons';
-    color: var(--bright-color);
+    color: var(--bright-color-swappa);
     visibility: visible;
     padding-left: 3px;
     padding-right: 2px;
@@ -1027,7 +1055,7 @@ code.inline {
 .container__9293f .children__9293f.scrollable__9293f .iconWrapper__9293f:after {
     content: "\e906 ";
     font-family: 'corruicons';
-    color: var(--bright-color);
+    color: var(--bright-color-swappa);
     visibility: visible;
     padding-left: 3px;
     padding-right: 2px;
@@ -1090,7 +1118,7 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 }
 
 .title_edbb22 .defaultColor__4bd52 {
-    color: var(--bright-color);
+    color: var(--bright-color-swappa);
 }
 
 .guildBadgeAndName_f37cb1 .name_f37cb1:before, .title_edbb22 .defaultColor__4bd52:before {
@@ -1128,7 +1156,7 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 
 .containerDefault_c69b6d .link__2ea32:hover, .interactive_f88cfd:hover {
     border-radius: 0 !important;
-    background-color: rgb(255,255,0,0.12);
+    background-color: rgb(from var(--neutral-color) r g b / 0.12);
 }
 
 .link__2ea32, .iconItem_c69b6d {
@@ -1177,7 +1205,7 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 
 .childContainer__91a9d:hover::before, .selected__91a9d .childContainer__91a9d {
     opacity: 1;
-    background-color: rgb(255,255,0,0.12);
+    background-color: rgb(from var(--neutral-color) r g b / 0.12);
 }
 
 .content__07f91::before, .selected__07f91 .content__07f91 {
@@ -1195,7 +1223,7 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 
 .content__07f91:hover::before, .selected__07f91 .content__07f91 {
     opacity: 1;
-    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg'), rgb(255,255,0,0.12) !important;
+    background: url('https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/marblynryetarget.svg'), rgb(from var(--neutral-color) r g b / 0.12) !important;
 }
 
 .unread__629e4 .unreadBar__629e4 {
@@ -1233,6 +1261,10 @@ ADDME once discord lets me fucking refresh themes holy shit dude
     border: 1px dashed var(--color, var(--bright-color));
     border-radius: 0px !important;
     background-color: var(--dark-color);
+}
+
+.tooltip_fa450d .defaultColor__4bd52 {
+    color: var(--bright-color);
 }
 
 .tabButton_b08638.editingPanelExpandButtonDefault__9c3be {
@@ -1320,17 +1352,17 @@ ADDME once discord lets me fucking refresh themes holy shit dude
 }
 
 .stack_dbd263.scroller_ef3116 {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(0, 0, 0) 25%);
+    background: linear-gradient(180deg, rgb(from var(--bright-color-swappa) r g b / 0) 0%, rgb(from var(--dark-color-swappa) r g b / 0.12) 25%);
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
 .guilds__5e434  {
-    background-color: var(--dark-color);
+    background-color: var(--dark-color-swappa);
 }
 
 .bar_c38106 {
-    background-color: var(--dark-color);
+    background-color: var(--dark-color-swappa);
 }
 
 .stack_dbd263.scroller_ef3116::after {
@@ -1560,7 +1592,7 @@ div[aria-label="Preview Message"] {
     border-style: double;
     border-width: 5px;
     transform: translateY(-10px);
-    background-color: black;
+    background-color: var(--dark-color-swappa);
 }
 
 .embedDescription__623de div .contents_c19a55 .avatar_c19a55 { 
@@ -1596,6 +1628,13 @@ div[aria-label="Preview Message"] {
 
 .tooltipContent_c36707 .contents_c19a55 .header_c19a55 {
     padding-left: 47px;
+}
+
+.messagelogger-deleted {
+    --corrutheme-chat-outline-color: var(--dread-color);
+    --text-default: var(--dread-color);
+    background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
+    background-size: auto 100%;
 }
 
 /* todo fix this shit
@@ -1707,6 +1746,10 @@ div[aria-label="Preview Message"] {
     justify-items: right;
 }
 
+.cozyMessage__5126c.isSystemMessage_c19a55 .contents_c19a55 {
+    border-color: var(--bright-color-swappa) !important;
+}
+
 .cozyMessage__5126c.isSystemMessage_c19a55 .contents_c19a55, .cozyMessage__5126c.isSystemMessage_c19a55 .container_b7e1cb, .cozyMessage__5126c.isSystemMessage_c19a55 .content__235ca {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/warp.png"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/static.gif") !important;
     background-color: unset;
@@ -1714,7 +1757,7 @@ div[aria-label="Preview Message"] {
     background-size: auto 100%;
     text-align: right !important;
     color: var(--dark-color);
-    border-color: var(--bright-color);
+    border-color: var(--bright-color-swappa);
     border-radius: 0;
     text-shadow: 0px 0px var(--neutral-color);
 }
@@ -1750,11 +1793,12 @@ div[aria-label="Preview Message"] {
     width: 58px;
     border: 0.32rem solid;
     border-radius: 100%;
-    border-color: var(--bright-color);
+    border-color: var(--bright-color-swappa);
     overflow: hidden;
     position: absolute;
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
+    border-style: double;
 }
 
 
@@ -1775,7 +1819,7 @@ div[aria-label="Preview Message"] {
     border: 0.32rem double;
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
-    border-color: var(--bright-color);
+    border-color: var(--bright-color-swappa);
 }
 
 .container_b7e1cb, .contents_c19a55 {
@@ -1794,6 +1838,10 @@ div[aria-label="Preview Message"] {
     border-color: var(--corrutheme-chat-outline-color) !important;
     border-radius: 0 !important;
     padding: 10px;
+}
+
+.content__122e4 .messageContent_c19a55 {
+    color: var(--corrutheme-chat-outline-color) !important;
 }
 
 .content__122e4 .container_b7e1cb {
@@ -1883,7 +1931,7 @@ svg .mask__44b0c {
 }
 
 .modeSelected__2ea32 .link__2ea32, .interactiveSelected__972a0 {
-    background-color: rgb(255,255,0,0.12);
+    background-color: rgb(from var(--neutral-color) r g b / 0.12);
     border-radius: 0 !important;
 }
 
@@ -1902,13 +1950,13 @@ svg .mask__44b0c {
 }
 
 .modeSelected__2ea32 .link__2ea32 .icon__2ea32 {
-    color: var(--bright-color);
-    fill: var(--bright-color);
+    color: var(--bright-color-swappa);
+    fill: var(--bright-color-swappa);
 }
 
 .clickable__9293f .icon__9293f {
-    color: var(--bright-color);
-    fill: var(--bright-color);
+    color: var(--bright-color-swappa);
+    fill: var(--bright-color-swappa);
 }
 
 .header_c19a55 .timestamp_c19a55 {
@@ -2210,4 +2258,8 @@ disabling because i think i broke something with this? unsure
 
 .content__20a53.vc-member-list-decorators-display-names {
     color: var(--bright-color);
+}
+
+.nonVisualMediaItemContainer_f4758a {
+    text-align: left !important;
 }

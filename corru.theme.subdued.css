@@ -1,0 +1,20 @@
+/**
+ * @name        corru.theme.subdued
+ * @author      jelleejamm
+ * @description changes the corru.theme colors to the ones from the subdued palette setting
+ * @version     0.0.9999
+ */
+
+:root {
+    --ui-saturation-modifier: 70%;
+    --ui-brightness-modifier: 10%; 
+    --dark-color: hsl(from black h s var(--ui-brightness-modifier));
+    --friend-color: hsl(from #00ffff h s var(--ui-saturation-modifier));
+    --obesk-color: hsl(from #ff00ff h s var(--ui-saturation-modifier));
+    --bastard-color: hsl(from #ff0066 h s var(--ui-saturation-modifier));
+    --fundfriend-color: hsl(from #00ff66 h s var(--ui-saturation-modifier));
+}
+
+.modalContent_e44912 .navScroller__409aa .itemContainer_caf372:has(.active_caf372) {
+    background-image: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/panelpatterntranflipsubdued.gif");
+}

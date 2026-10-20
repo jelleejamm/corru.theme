@@ -2,7 +2,7 @@
 ### corru.theme is a _work in progress_ discord theme, themed around [corru.observer](https://corru.observer).
 it is intended for use with [equicord](https://equicord.org) and [vencord](https://vencord.dev), and usage of the themeattributes plugin is advised
 
-**this theme currently DOES NOT WORK in light mode!!!** i might try and make it work in the future but that is currently out of the cards + a pain in the ass
+**light mode in this theme is a big WIP, expect to have and see issues with it!!** (incoherence level spike trust)
 
 ## installation
 
@@ -19,8 +19,9 @@ now, you have two choices. either:
 
 ### .css file explanations
 - `corru.theme.css` is the main theme
+- `corru.theme.subdued.css` changes the colors of the theme to match that of the subdued palette introduced in the ing update
 - `corru.theme.interloper.css` makes your messages appear like the interloper's. **themeattributes plugin required**
-- `corru.theme.selfcolor.css` lets you customize your messages' colors independently. to use this: open your quickcss, add an element called `:root` and in it add a `--corrutheme-chat-selfcolor` attribute with a hex code after it. (ie `:root { --corrutheme-chat-selfcolor: #ff0066 }`). incompatible with the interloper theme, **themeattributes plugin required**
+- `corru.theme.selfcolor.css` lets you customize your messages' colors independently. to use this: open your quick css tab, add an element called `:root` and in it add a `--corrutheme-chat-selfcolor` attribute with a hex code after it. (ie `:root { --corrutheme-chat-selfcolor: #ff0066 }`). incompatible with the interloper theme. **themeattributes plugin required**
 - `corru.theme.selfmsgright.css` moves your messages to the right, similarly to the interloper's. **themeattributes plugin required**
 
 - `corru.theme.akizet.css` is an example theme which uses `corru.theme.selfcolor.css` to turn your messages into akizet's. **themeattributes plugin and corru.theme.selfcolor theme required**

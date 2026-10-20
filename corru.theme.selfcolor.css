@@ -18,7 +18,7 @@ li[data-is-self="true"] .before_subtext_ada32f, .subtext_ada32f {
 
 li[data-is-self="true"] .container_b7e1cb, 
 li[data-is-self="true"] .contents_c19a55,
-li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55 .avatar_c19a55,
-li[data-is-self="true"] .cozyMessage__5126c .contents_c19a55:has(.avatar_c19a55):before {
+li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .contents_c19a55 .avatar_c19a55,
+li[data-is-self="true"] .cozyMessage__5126c:not(.isSystemMessage_c19a55) .contents_c19a55:has(.avatar_c19a55):before {
     border-color: var(--corrutheme-chat-selfcolor) !important;
 }
