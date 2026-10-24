@@ -335,7 +335,8 @@
 /* bleach area */
 
 .item_caf372, .item_e4d939, .linkButtonIcon__972a0, .spine__5b40b, .username__07f91, .statusText__5cda9,
-.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac, .container__13cf1, .container__91a9d, .reactionCount__23977 {
+.channelIcon__9293f svg, .channelStatus__49508, .wrapper_f7ecac, .container__13cf1, .container__91a9d, .reactionCount__23977,
+.icon__07f91 {
     color: var(--bright-color-swappa);
     fill: var(--bright-color-swappa);
 }
@@ -368,7 +369,7 @@
 
 /* obesk area */
 
-.icon__07f91, .mediaMosaicAltTextPopoutTitle__0f481 {
+.mediaMosaicAltTextPopoutTitle__0f481, .iconServer__07f91 {
     color: var(--obesk-color);
     fill: var(--obesk-color);
 }
@@ -540,6 +541,14 @@ u, .underline_ada32f {
 .vc-addon-card {
     background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/badstatic.gif") !important; 
     background-size: auto 100%;
+}
+
+.spoilerMarkdownContent__299eb.hidden__299eb h1>span, .spoilerMarkdownContent__299eb.hidden__299eb h2>span, .spoilerMarkdownContent__299eb.hidden__299eb h3>span, .spoilerMarkdownContent__299eb.hidden__299eb h4>span,
+.spoilerMarkdownContent__299eb.hidden__299eb h5>span, .spoilerMarkdownContent__299eb.hidden__299eb ol li>span, .spoilerMarkdownContent__299eb.hidden__299eb small>span, .spoilerMarkdownContent__299eb.hidden__299eb ul li>span,
+.spoilerMarkdownContent__299eb.hidden__299eb, .spoilerMarkdownContent__299eb.hidden__299eb pre>div:before {
+    background: url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/stun.gif"), url("https://raw.githubusercontent.com/jelleejamm/corru.theme/refs/heads/main/assets/img/ultradarkclouds.gif") !important; 
+    background-size: auto 100%, auto 100%;
+    border-radius: 0 !important;
 }
 
 .channelTextArea__5126c.channelTextArea__74017, .operations_bab751 {
@@ -947,15 +956,16 @@ code.inline {
     background-size: cover, cover;
     box-shadow: 0px 0px 5px var(--neutral-color);
     border-radius: 0;
-    border-color: var(--neutral-color);
     text-shadow: 2px 2px var(--neutral-color);
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
     text-align: left;
 }
 
-.hljs {
-	color: var(--dark-color) !important;
+.codeContainer__75297 .hljs {
+    color: var(--dark-color) !important;
+    border: 1px solid var(--neutral-color);
+    border-radius: 0;
 }
 
 .divider__5126c.beforeGroup__5126c.divider__908e2.isUnread__908e2 {
@@ -1885,7 +1895,7 @@ svg .mask__44b0c {
 
 /* this part of da sea ss hase been chosen 2 become... EVIL MODE!!! */
 
-.messageContent_c19a55 h1 span span {
+.messageContent_c19a55 h1 span span:not(.obscured):not(.obscuredTextContent__299eb):not(.obscuredTextContentInner__299eb) { /* this is the worst fucking thing i've had to do to fix a bug in this holy shit */
     font-family: bastard;
     color: var(--bastard-color) !important;
     border: 1px solid var(--bastard-color);
@@ -1897,7 +1907,7 @@ svg .mask__44b0c {
 
 /* SEE U SOON INTRALKOBER >:P */
 
-.messageContent_c19a55 h2 span span {
+.messageContent_c19a55 h2 span span:not(.obscured):not(.obscuredTextContent__299eb):not(.obscuredTextContentInner__299eb) {
     font-family: "spacemono", monospace;
     color: var(--obesk-color) !important;
     text-shadow: 1px 1px var(--dark-color), 2px 2px 2px var(--friend-color);
@@ -1909,7 +1919,7 @@ svg .mask__44b0c {
     line-height: 220%;
 }
 
-.messageContent_c19a55 h3 span span {
+.messageContent_c19a55 h3 span span:not(.obscured):not(.obscuredTextContent__299eb):not(.obscuredTextContentInner__299eb) {
     font-family: "beech";
     color: var(--dark-color) !important;
     font-size: 120%;
@@ -2007,10 +2017,10 @@ article {
 }
 
 .footerContent__083ae .buttonContainer__083ae .button_a22cb0 {
-    border-radius: 0;
-    border: 0;
-    color: var(--neutral-color);
-    background-color: var(--dark-color);
+    border-radius: 0 !important;
+    border: 0 !important;
+    color: var(--neutral-color) !important;
+    background-color: var(--dark-color) !important;
     font-family: barcodetext;
     font-size: 1.5em;
     text-transform: uppercase;
